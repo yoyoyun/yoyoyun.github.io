@@ -327,7 +327,7 @@
 <p>默认会在相应路径下（~/.ssh/id_rsa.pub）生成id_rsa和id_rsa.pub两个文件。<br>Find前往文件夹~/.ssh/id_rsa.pub打开id_rsa.pub文件，里面的信息即为SSH key，将这些信息复制到Github的Add SSH key页面即可。</p>
 <p>进入Github –&gt; Settings –&gt; SSH keys –&gt; add SSH key:</p>
 <p>Title里任意添一个标题，将复制的内容粘贴到Key里，点击下方Add key绿色按钮即可。</p>
-<h2 id="4-生成hexo静态页面并更新到github"><a href="#4-生成hexo静态页面并更新到github" class="headerlink" title="4. 生成hexo静态页面并更新到github"></a>4. 生成hexo静态页面并更新到github</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ hexo generate   或者 hexo g</span><br></pre></td></tr></table></figure>
+<h2 id="4-生成hexo静态页面并更新到github"><a href="#4-生成hexo静态页面并更新到github" class="headerlink" title="4. 生成hexo静态页面并更新到github"></a>4. 生成hexo静态页面并更新到github</h2><h3 id="4-1-初始化生成hexo页面"><a href="#4-1-初始化生成hexo页面" class="headerlink" title="4.1 初始化生成hexo页面"></a>4.1 初始化生成hexo页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ hexo generate   或者 hexo g</span><br></pre></td></tr></table></figure>
 <p>这步若报错则执行下行命令，若无则忽略</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo --save</span><br></pre></td></tr></table></figure>
 <p>继续</p>
@@ -335,7 +335,7 @@
 <p>若出现找不到git错误，则执行下行命令，若无则忽略</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 <p>此时，浏览器中打开网址<a href="http://gonghonglou.github.io" target="_blank" rel="noopener">http://gonghonglou.github.io</a>（将gonghonglou换成你的用户名）能看到和打开<a href="http://localhost:4000时一样的页面。" target="_blank" rel="noopener">http://localhost:4000时一样的页面。</a></p>
-<h3 id="4-1-发布文章"><a href="#4-1-发布文章" class="headerlink" title="4.1 发布文章"></a>4.1 发布文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ hexo new <span class="string">"postName"</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-2-发布文章"><a href="#4-2-发布文章" class="headerlink" title="4.2 发布文章"></a>4.2 发布文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ hexo new <span class="string">"postName"</span></span><br></pre></td></tr></table></figure>
 <p>名为postName.md的文件会建在目录/blog/source/_posts下。<br>随后可用macdown编辑md文件。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g //生成缓存和静态文件</span><br><span class="line">$ hexo d //部署到服务器</span><br></pre></td></tr></table></figure>
 <h2 id="5-Other"><a href="#5-Other" class="headerlink" title="5. Other"></a>5. Other</h2><h3 id="5-1-换主题"><a href="#5-1-换主题" class="headerlink" title="5.1 换主题"></a>5.1 换主题</h3><p>以hexo-theme-next为例：</p>
