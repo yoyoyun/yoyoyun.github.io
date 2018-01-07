@@ -83,13 +83,15 @@
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac上搭建基于GitHub Pages的Hexo博客">
-<meta property="og:url" content="http://yoursite.com/2018/01/04/Mac上搭建基于GitHubPage的Hexo博客/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/01/04/Mac上搭建基于GitHub-Pages的Hexo博客/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Basic environment: Node.js , Git Hexo GitHub Other  Basic environmentNode.jsInstall Node.js，下载双击安装即可。 GitMac 下 iTerm 已支持 Git，推荐使用 Hexo安装Hexo1$ sudo npm install -g hexo -g 全局安装 初始化自主选定存放博客目录，终端cd进入目录后">
-<meta property="og:updated_time" content="2018-01-07T05:33:54.439Z">
+<meta property="og:image" content="http://yoursite.com/2018/01/04/Mac上搭建基于GitHub-Pages的Hexo博客/创建githubpages仓库.png">
+<meta property="og:updated_time" content="2018-01-07T05:54:25.169Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac上搭建基于GitHub Pages的Hexo博客">
 <meta name="twitter:description" content="Basic environment: Node.js , Git Hexo GitHub Other  Basic environmentNode.jsInstall Node.js，下载双击安装即可。 GitMac 下 iTerm 已支持 Git，推荐使用 Hexo安装Hexo1$ sudo npm install -g hexo -g 全局安装 初始化自主选定存放博客目录，终端cd进入目录后">
+<meta name="twitter:image" content="http://yoursite.com/2018/01/04/Mac上搭建基于GitHub-Pages的Hexo博客/创建githubpages仓库.png">
 
 
 
@@ -119,7 +121,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/04/Mac上搭建基于GitHubPage的Hexo博客/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/04/Mac上搭建基于GitHub-Pages的Hexo博客/"/>
 
 
 
@@ -232,7 +234,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/04/Mac上搭建基于GitHubPage的Hexo博客/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/04/Mac上搭建基于GitHub-Pages的Hexo博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -314,7 +316,8 @@
 <p>开启hexo服务器</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 <p>浏览器中打开网址<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>，可看到页面。</p>
-<h3 id="关联github"><a href="#关联github" class="headerlink" title="关联github"></a>关联github</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ vim _config.yml</span><br></pre></td></tr></table></figure>
+<h3 id="关联github"><a href="#关联github" class="headerlink" title="关联github"></a>关联github</h3><p>登录github账号，新建仓库，名为用户名.github.io固定写法，如gonghonglou.github.io即下图所示<br><img src="/2018/01/04/Mac上搭建基于GitHub-Pages的Hexo博客/创建githubpages仓库.png" alt="创建githubpages仓库"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ vim _config.yml</span><br></pre></td></tr></table></figure>
 <p>最下面，修改成</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: https://github.com/gonghonglou/gonghonglou.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>需要将repository后gonghonglou换成自己的用户名</p>
