@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Basic environment: Node.js , Git Hexo GitHub Other  1. Basic environment1.1 Node.jsInstall Node.js，下载双击安装即可。 1.2 GitMac 下 iTerm 已支持 Git，推荐使用 2. Hexo2.1 安装Hexo1$ sudo npm install -g hexo -g 全局安装 2.2 初">
+<meta name="description" content="Basic environment: Node.js , Git Hexo GitHub 生成hexo静态页面并更新到github Other 总结  1. Basic environment1.1 Node.jsInstall Node.js，下载双击安装即可。 1.2 GitMac 下 iTerm 已支持 Git，推荐使用 2. Hexo2.1 安装Hexo1$ sudo npm insta">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac上搭建基于GitHub Pages的Hexo博客">
 <meta property="og:url" content="http://yoursite.com/2018/01/04/Mac上搭建基于GitHub-Pages的Hexo博客/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Basic environment: Node.js , Git Hexo GitHub Other  1. Basic environment1.1 Node.jsInstall Node.js，下载双击安装即可。 1.2 GitMac 下 iTerm 已支持 Git，推荐使用 2. Hexo2.1 安装Hexo1$ sudo npm install -g hexo -g 全局安装 2.2 初">
+<meta property="og:description" content="Basic environment: Node.js , Git Hexo GitHub 生成hexo静态页面并更新到github Other 总结  1. Basic environment1.1 Node.jsInstall Node.js，下载双击安装即可。 1.2 GitMac 下 iTerm 已支持 Git，推荐使用 2. Hexo2.1 安装Hexo1$ sudo npm insta">
 <meta property="og:image" content="http://yoursite.com/2018/01/04/Mac上搭建基于GitHub-Pages的Hexo博客/创建githubpages仓库.png">
-<meta property="og:updated_time" content="2018-01-07T06:14:07.826Z">
+<meta property="og:updated_time" content="2018-01-07T13:19:35.328Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac上搭建基于GitHub Pages的Hexo博客">
-<meta name="twitter:description" content="Basic environment: Node.js , Git Hexo GitHub Other  1. Basic environment1.1 Node.jsInstall Node.js，下载双击安装即可。 1.2 GitMac 下 iTerm 已支持 Git，推荐使用 2. Hexo2.1 安装Hexo1$ sudo npm install -g hexo -g 全局安装 2.2 初">
+<meta name="twitter:description" content="Basic environment: Node.js , Git Hexo GitHub 生成hexo静态页面并更新到github Other 总结  1. Basic environment1.1 Node.jsInstall Node.js，下载双击安装即可。 1.2 GitMac 下 iTerm 已支持 Git，推荐使用 2. Hexo2.1 安装Hexo1$ sudo npm insta">
 <meta name="twitter:image" content="http://yoursite.com/2018/01/04/Mac上搭建基于GitHub-Pages的Hexo博客/创建githubpages仓库.png">
 
 
@@ -305,7 +305,9 @@
 <li>Basic environment: Node.js , Git</li>
 <li>Hexo</li>
 <li>GitHub</li>
+<li>生成hexo静态页面并更新到github</li>
 <li>Other</li>
+<li>总结</li>
 </ol>
 <h2 id="1-Basic-environment"><a href="#1-Basic-environment" class="headerlink" title="1. Basic environment"></a>1. Basic environment</h2><h3 id="1-1-Node-js"><a href="#1-1-Node-js" class="headerlink" title="1.1 Node.js"></a>1.1 Node.js</h3><p>Install <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js</a>，<br>下载双击安装即可。</p>
 <h3 id="1-2-Git"><a href="#1-2-Git" class="headerlink" title="1.2 Git"></a>1.2 Git</h3><p>Mac 下 iTerm 已支持 Git，推荐使用</p>
@@ -357,7 +359,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![图片描述](postname/图片名.jpg)</span><br></pre></td></tr></table></figure>
 <h3 id="5-5-next主题取消对文章标题的自动编号"><a href="#5-5-next主题取消对文章标题的自动编号" class="headerlink" title="5.5 next主题取消对文章标题的自动编号"></a>5.5 next主题取消对文章标题的自动编号</h3><p>主题配置文件next目录下的_config.yml的number修改为false，注意空格。</p>
 <h2 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a>6. 总结</h2><p>发布文章</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"postname"</span>    //blog/<span class="built_in">source</span>/_post/postname.md</span><br><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ hexo new <span class="string">"postname"</span>    //blog/<span class="built_in">source</span>/_post/postname.md</span><br><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
 <p>mac chrome  command+shift+r 强制刷新页面</p>
 <p>More info: <a href="https://www.jianshu.com/p/13e64c9e2295" target="_blank" rel="noopener">参考地址1</a></p>
 
