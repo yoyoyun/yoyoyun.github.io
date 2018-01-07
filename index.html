@@ -247,7 +247,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/01/04/Mac上搭建基于GitHubPage的Hexo博客/" itemprop="url">Mac上搭建基于GitHubPage的Hexo博客</a></h1>
+                <a class="post-title-link" href="/2018/01/04/Mac上搭建基于GitHubPage的Hexo博客/" itemprop="url">Mac上搭建基于GitHub Pages的Hexo博客</a></h1>
         
 
         <div class="post-meta">
@@ -305,16 +305,16 @@
 <li>GitHub</li>
 <li>Other</li>
 </ol>
-<h2 id="Basic-environment"><a href="#Basic-environment" class="headerlink" title="Basic environment"></a>Basic environment</h2><h3 id="1-Node-js"><a href="#1-Node-js" class="headerlink" title="1. Node.js"></a>1. Node.js</h3><p>Install <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js</a>，<br>下载双击安装即可。</p>
-<h3 id="2-Git"><a href="#2-Git" class="headerlink" title="2. Git"></a>2. Git</h3><p>Mac 下 iTerm 已支持 Git，推荐使用</p>
-<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="1-安装hexo"><a href="#1-安装hexo" class="headerlink" title="1.安装hexo"></a>1.安装hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
+<h2 id="Basic-environment"><a href="#Basic-environment" class="headerlink" title="Basic environment"></a>Basic environment</h2><h3 id="Node-js"><a href="#Node-js" class="headerlink" title="Node.js"></a>Node.js</h3><p>Install <a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">Node.js</a>，<br>下载双击安装即可。</p>
+<h3 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h3><p>Mac 下 iTerm 已支持 Git，推荐使用</p>
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
 <p>-g 全局安装</p>
-<h3 id="2-初始化"><a href="#2-初始化" class="headerlink" title="2.初始化"></a>2.初始化</h3><p>终端cd到自主选定的目录</p>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>自主选定存放博客目录，终端cd进入目录后，执行以下命令。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
 <p>开启hexo服务器</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
 <p>浏览器中打开网址<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>，可看到页面。</p>
-<h3 id="3-关联github"><a href="#3-关联github" class="headerlink" title="3.关联github"></a>3.关联github</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ vim _config.yml</span><br></pre></td></tr></table></figure>
+<h3 id="关联github"><a href="#关联github" class="headerlink" title="关联github"></a>关联github</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ vim _config.yml</span><br></pre></td></tr></table></figure>
 <p>最下面，修改成</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: https://github.com/gonghonglou/gonghonglou.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>需要将repository后gonghonglou换成自己的用户名</p>
@@ -560,6 +560,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">Tags</span>
+                
+              </div>
             
 
           </nav>
