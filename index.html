@@ -299,8 +299,35 @@
       
         
           
-            <h2 id=""><a href="#" class="headerlink" title=". / ~"></a>. / ~</h2><p>. 表示当前目录<br>/ 表示根目录<br>～ 表示个人目录，以root身份登陆，为/root/，以name登陆，为/home/name/</p>
-<h2 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h2><p>ls 查看当前目录下的所有可见文件<br>ls -a 查看当前目录下的所有可见及隐藏文件<br>ls -al 查看当前目录下的所有可见及隐藏文件的详细信息</p>
+            <h2 id=""><a href="#" class="headerlink" title=". / ~"></a>. / ~</h2><p>. 表示当前目录</p>
+<p>/ 表示根目录</p>
+<p>～ 表示个人目录，以root身份登陆，为/root/，以name登陆，为/home/name/</p>
+<h2 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h2><p><code>su</code> 输入root密码</p>
+<p><code>exit</code> 退出root用户</p>
+<h2 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ useradd -m username -s /bin/bash</span><br></pre></td></tr></table></figure>
+<h2 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ passwd username</span><br></pre></td></tr></table></figure>
+<h2 id="增加管理员权限"><a href="#增加管理员权限" class="headerlink" title="增加管理员权限"></a>增加管理员权限</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ visudo</span><br></pre></td></tr></table></figure>
+<p>找到 <code>root ALL=(ALL) ALL</code> 这行（应该在第98行，按 <code>ESC</code> -冒号-98-回车键，可以直接跳到第98行 ），然后在这行下面增加一行内容：<code>username ALL=(ALL) ALL</code> （当中的间隔为tab）,即为username增加了管理员权限。</p>
+<h2 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h2><p><code>ls</code> 查看当前目录下的所有可见文件</p>
+<p><code>ls -l</code> 查看当前目录下的所有可见文件的详细信息</p>
+<p><code>ls -a</code> 查看当前目录下的所有可见文件及隐藏文件</p>
+<p><code>ls -al</code>查看当前目录下的所有可见文件及隐藏文件的详细信息</p>
+<h2 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h2><p>（1）同一目录下为重命名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mv file1.txt file2.txt        <span class="comment">#重命名文件</span></span><br><span class="line">$ mv directory1/ directory2/    <span class="comment">#重命名目录</span></span><br></pre></td></tr></table></figure>
+<p>（2）不同目录下为移动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mv file1.txt /home/<span class="built_in">test</span>       <span class="comment">#移动文件</span></span><br><span class="line">$ mv directory1 /home/<span class="built_in">test</span>      <span class="comment">#移动目录</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mv file1.txt file2.txt file3.txt /home/<span class="built_in">test</span> <span class="comment">#移动多个文件</span></span><br><span class="line">$ mv *.txt /home/<span class="built_in">test</span>  <span class="comment">#通配符移动多个文件</span></span><br></pre></td></tr></table></figure>
+<p>（3）选项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mv [-f | -i | -n] [-v] source target          #重命名</span><br><span class="line">mv [-f | -i | -n] [-v] source ... directory   #移动</span><br></pre></td></tr></table></figure>
+<p><code>-f</code> 无条件覆盖已经存在的文件，优先级高于<code>-i</code>和<code>-n</code>选项</p>
+<p><code>-i</code> 覆盖同名文件时给出提示，需要确认</p>
+<p><code>-n</code> 不允许覆盖同名文件</p>
+<p><code>-v</code> 打印命令执行结果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ mv -f *.txt /home/<span class="built_in">test</span></span><br><span class="line">$ mv -i file1.txt /home/<span class="built_in">test</span></span><br><span class="line">$ mv -vn *.txt /home/<span class="built_in">test</span></span><br><span class="line">$ mv -v *.txt /home/<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<p><code>-u</code> 根据文件修改时间戳，若源文件比目标文件新，则覆盖</p>
+<p><code>-b</code> 若目标目录已有同名文件，则在覆盖之前创建旧文件的备份</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mv -uv *.txt /home/<span class="built_in">test</span></span><br><span class="line">$ mv -bv *.txt /home/<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
+<h2 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ rm file1.txt       <span class="comment">#删除文件</span></span><br><span class="line">$ rm -r directory1   <span class="comment">#递归删除目录，询问确认</span></span><br><span class="line">$ rm -rf directory1  <span class="comment">#递归删除目录，无须询问</span></span><br></pre></td></tr></table></figure>
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://blog.csdn.net/u014082714/article/details/44081565" target="_blank" rel="noopener">. / ~</a></p>
 
           
@@ -433,6 +460,7 @@
 <h2 id="彻底解决方案"><a href="#彻底解决方案" class="headerlink" title="彻底解决方案"></a>彻底解决方案</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xattr -c *.txt</span><br></pre></td></tr></table></figure>
 <p>-c 参数去除当前文件夹中所有 txt 的附加属性。再次 ls -al 可以发现没有了@符号。</p>
 <p>过一段时间之后也并未出现无法打开情形，可认为此问题已彻底解决。</p>
+<p>上一行划掉…orz,重新插盘之后又变成灰色，无法打开。解决方法待继续探索…</p>
 <h2 id="批量处理方案"><a href="#批量处理方案" class="headerlink" title="批量处理方案"></a>批量处理方案</h2><p>方案一：（未实践）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xattr -c -r ./*</span><br></pre></td></tr></table></figure>
 <p>-r 表示遍历文件夹中的文件。</p>
