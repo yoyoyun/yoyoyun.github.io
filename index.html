@@ -181,7 +181,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -191,7 +191,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -257,7 +257,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T11:30:43+08:00">
                 2018-04-04
@@ -308,10 +308,20 @@
 <p>apache2配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/apache2/httpd.conf</span><br></pre></td></tr></table></figure></p>
 <h3 id="开启php"><a href="#开启php" class="headerlink" title="开启php"></a>开启php</h3><p>打开apache2配置文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/apache2/httpd.conf</span><br></pre></td></tr></table></figure>
-<p>找到<br><figure class="highlight plain"><figcaption><span>php7_module libexec/apache2/libphp7.so```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">去掉注释（去掉前面的#）即可</span><br><span class="line"></span><br><span class="line">### 修改apache2网站默认目录</span><br><span class="line">默认的文件夹位置为`/Library/WebServer/Documents`,该目录默认是隐藏的，操作不方便，将其修改为自定义的home目录</span><br><span class="line">打开apache2配置文件</span><br></pre></td></tr></table></figure></p>
-<p>sudo vim /etc/apache2/httpd.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">找到</span><br><span class="line"></span><br><span class="line">```# DocumentRoot &quot;/Library/WebServer/Documents&quot;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><figcaption><span><directory "="" library="" webserver="" documents"="">```</directory></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">修改为</span><br><span class="line"></span><br><span class="line">```DocumentRoot &quot;/Users/lixiaoyun/Projects/webserver&quot;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><figcaption><span>"/Users/lixiaoyun/Projects/webserver">```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">重启服务器即可</span><br><span class="line"></span><br><span class="line">### mysql</span><br><span class="line">没有自带mysql，需要自己到[官网](https://dev.mysql.com/downloads/mysql/)下载安装。下载dmg后双击一步一步安装，最后会给出root@localhost:临时密码 的提示，这个临时密码，务必保存下来。</span><br><span class="line"></span><br><span class="line">进入系统偏好设置，点击mysql。</span><br><span class="line"></span><br><span class="line">点击start mysql server</span><br><span class="line"></span><br><span class="line">打开终端，输入命令(temppassword替换为之前保存的临时密码)。</span><br><span class="line">```/usr/local/mysql/bin/mysqladmin -u root -p&apos;temppassword&apos; password &apos;newpassword&apos;</span><br></pre></td></tr></table></figure>
+<p>找到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#LoadModule php7_module libexec/apache2/libphp7.so</span><br></pre></td></tr></table></figure>
+<p>去掉注释（去掉前面的#）即可</p>
+<h3 id="修改apache2网站默认目录"><a href="#修改apache2网站默认目录" class="headerlink" title="修改apache2网站默认目录"></a>修改apache2网站默认目录</h3><p>默认的文件夹位置为<code>/Library/WebServer/Documents</code>,该目录默认是隐藏的，操作不方便，将其修改为自定义的home目录<br>打开apache2配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/apache2/httpd.conf</span><br></pre></td></tr></table></figure>
+<p>找到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># DocumentRoot &quot;/Library/WebServer/Documents&quot;</span><br><span class="line"># &lt;Directory &quot;/Library/WebServer/Documents&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>修改为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DocumentRoot &quot;/Users/lixiaoyun/Projects/webserver&quot;</span><br><span class="line">&lt;Directory &quot;/Users/lixiaoyun/Projects/webserver&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>重启服务器即可</p>
+<h3 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h3><p>没有自带mysql，需要自己到<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">官网</a>下载安装。下载dmg后双击一步一步安装，最后会给出root@localhost:临时密码 的提示，这个临时密码，务必保存下来。</p>
+<p>进入系统偏好设置，点击mysql。</p>
+<p>点击start mysql server</p>
+<p>打开终端，输入命令(temppassword替换为之前保存的临时密码)。<br><code>/usr/local/mysql/bin/mysqladmin -u root -p&#39;temppassword&#39; password &#39;newpassword&#39;</code></p>
 <h3 id="phpmyadmin"><a href="#phpmyadmin" class="headerlink" title="phpmyadmin"></a>phpmyadmin</h3><p>直接到<a href="https://www.phpmyadmin.net/downloads/" target="_blank" rel="noopener">官网</a>下载最新的zip包，建议下载多语言版本，支持简体中文。下载完成后，将解压后的文件夹重命名为<code>phpMyAdmin</code>，然后放到自定义的apache默认路径下。</p>
 <p>在浏览器中输入<code>localhost/phpMyAdmin</code>，出现mysql登录页面，在该页面可以设置为中文，用root和设置的密码登录即可。</p>
 <p><a href="https://blog.csdn.net/intheair100/article/details/54667519" target="_blank" rel="noopener">参考链接一</a></p>
@@ -392,7 +402,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T11:26:28+08:00">
                 2018-04-04
@@ -507,7 +517,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/04/MAC下创建venv虚拟环境/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2018/04/04/MAC下创建venv虚拟环境/" itemprop="url">Unbenannt</a></h1>
         
 
         <div class="post-meta">
@@ -517,7 +527,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T10:49:22+08:00">
                 2018-04-04
@@ -626,7 +636,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/02/Ubuntu14.04安装apache2+php+mysql/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2018/02/02/Ubuntu14.04安装apache2+php+mysql/" itemprop="url">Unbenannt</a></h1>
         
 
         <div class="post-meta">
@@ -636,7 +646,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-02T15:54:22+08:00">
                 2018-02-02
@@ -790,7 +800,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/02/Ubuntu16.04安装python3.6/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2018/02/02/Ubuntu16.04安装python3.6/" itemprop="url">Unbenannt</a></h1>
         
 
         <div class="post-meta">
@@ -800,7 +810,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-02T15:54:22+08:00">
                 2018-02-02
@@ -954,7 +964,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/02/ubutnu14.04安装vmware tools/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2018/02/02/ubutnu14.04安装vmware tools/" itemprop="url">Unbenannt</a></h1>
         
 
         <div class="post-meta">
@@ -964,7 +974,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-02T14:50:55+08:00">
                 2018-02-02
@@ -1084,7 +1094,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-08T10:28:18+08:00">
                 2018-01-08
@@ -1235,7 +1245,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-07T20:40:03+08:00">
                 2018-01-07
@@ -1377,7 +1387,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-04T20:40:40+08:00">
                 2018-01-04
@@ -1557,7 +1567,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-04T20:23:42+08:00">
                 2018-01-04
@@ -1690,7 +1700,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">10</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -1703,7 +1713,7 @@
               <div class="site-state-item site-state-tags">
                 
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">tags</span>
+                  <span class="site-state-item-name">Tags</span>
                 
               </div>
             
@@ -1749,7 +1759,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
