@@ -228,6 +228,141 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/MAC下apache2-php7-mysql-phpmyadmin/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yoyoyun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="画船听雨眠">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/04/MAC下apache2-php7-mysql-phpmyadmin/" itemprop="url">MAC下apache2+php7+mysql+phpmyadmin</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T11:30:43+08:00">
+                2018-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="MAC下apache2-php7-mysql-phpmyadmin"><a href="#MAC下apache2-php7-mysql-phpmyadmin" class="headerlink" title="MAC下apache2+php7+mysql+phpmyadmin"></a>MAC下apache2+php7+mysql+phpmyadmin</h2><p>macOS High Sierra 10.13.3<br>自带了apache 2.4.8和php7.1.7，但默认情况下未开启</p>
+<h3 id="开启apache2"><a href="#开启apache2" class="headerlink" title="开启apache2"></a>开启apache2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl start</span><br></pre></td></tr></table></figure>
+<p>停止apache2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl stop</span><br></pre></td></tr></table></figure>
+<p>重启apache2</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl restart</span><br></pre></td></tr></table></figure>
+<p>apache2配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/apache2/httpd.conf</span><br></pre></td></tr></table></figure></p>
+<h3 id="开启php"><a href="#开启php" class="headerlink" title="开启php"></a>开启php</h3><p>打开apache2配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/apache2/httpd.conf</span><br></pre></td></tr></table></figure>
+<p>找到<br><figure class="highlight plain"><figcaption><span>php7_module libexec/apache2/libphp7.so```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">去掉注释（去掉前面的#）即可</span><br><span class="line"></span><br><span class="line">### 修改apache2网站默认目录</span><br><span class="line">默认的文件夹位置为`/Library/WebServer/Documents`,该目录默认是隐藏的，操作不方便，将其修改为自定义的home目录</span><br><span class="line">打开apache2配置文件</span><br></pre></td></tr></table></figure></p>
+<p>sudo vim /etc/apache2/httpd.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">找到</span><br><span class="line"></span><br><span class="line">```# DocumentRoot &quot;/Library/WebServer/Documents&quot;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><figcaption><span><directory "="" library="" webserver="" documents"="">```</directory></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">修改为</span><br><span class="line"></span><br><span class="line">```DocumentRoot &quot;/Users/lixiaoyun/Projects/webserver&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><figcaption><span>"/Users/lixiaoyun/Projects/webserver">```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">重启服务器即可</span><br><span class="line"></span><br><span class="line">### mysql</span><br><span class="line">没有自带mysql，需要自己到[官网](https://dev.mysql.com/downloads/mysql/)下载安装。下载dmg后双击一步一步安装，最后会给出root@localhost:临时密码 的提示，这个临时密码，务必保存下来。</span><br><span class="line"></span><br><span class="line">进入系统偏好设置，点击mysql。</span><br><span class="line"></span><br><span class="line">点击start mysql server</span><br><span class="line"></span><br><span class="line">打开终端，输入命令(temppassword替换为之前保存的临时密码)。</span><br><span class="line">```/usr/local/mysql/bin/mysqladmin -u root -p&apos;temppassword&apos; password &apos;newpassword&apos;</span><br></pre></td></tr></table></figure>
+<h3 id="phpmyadmin"><a href="#phpmyadmin" class="headerlink" title="phpmyadmin"></a>phpmyadmin</h3><p>直接到<a href="https://www.phpmyadmin.net/downloads/" target="_blank" rel="noopener">官网</a>下载最新的zip包，建议下载多语言版本，支持简体中文。下载完成后，将解压后的文件夹重命名为<code>phpMyAdmin</code>，然后放到自定义的apache默认路径下。</p>
+<p>在浏览器中输入<code>localhost/phpMyAdmin</code>，出现mysql登录页面，在该页面可以设置为中文，用root和设置的密码登录即可。</p>
+<p><a href="https://blog.csdn.net/intheair100/article/details/54667519" target="_blank" rel="noopener">参考链接一</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/Mac下创建python3-virtualenv虚拟环境/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -424,23 +559,7 @@
       
         
           
-            <h2 id="MAC下安装apache2-php-mysql-phpmyadmin"><a href="#MAC下安装apache2-php-mysql-phpmyadmin" class="headerlink" title="MAC下安装apache2+php+mysql+phpmyadmin"></a>MAC下安装apache2+php+mysql+phpmyadmin</h2><p>macOS High Sierra 10.13.3<br>自带了apache 2.4.8和php7.1.7，但默认情况下未开启</p>
-<h3 id="开启apache2"><a href="#开启apache2" class="headerlink" title="开启apache2"></a>开启apache2</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl start</span><br></pre></td></tr></table></figure>
-<p>停止apache2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl stop</span><br></pre></td></tr></table></figure>
-<p>重启apache2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl restart</span><br></pre></td></tr></table></figure>
-<p>apache2配置文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/apache2/httpd.conf</span><br></pre></td></tr></table></figure></p>
-<h3 id="开启php"><a href="#开启php" class="headerlink" title="开启php"></a>开启php</h3><p>打开apache2配置文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/apache2/httpd.conf</span><br></pre></td></tr></table></figure>
-<p>找到<br><figure class="highlight plain"><figcaption><span>php7_module libexec/apache2/libphp7.so```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">去掉注释（去掉前面的#）即可</span><br><span class="line"></span><br><span class="line">### 修改apache2网站默认目录</span><br><span class="line">默认的文件夹位置为`/Library/WebServer/Documents`,该目录默认是隐藏的，操作不方便，将其修改为自定义的home目录</span><br><span class="line">打开apache2配置文件</span><br></pre></td></tr></table></figure></p>
-<p>sudo vim /etc/apache2/httpd.conf<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">找到</span><br><span class="line"></span><br><span class="line">```# DocumentRoot &quot;/Library/WebServer/Documents&quot;</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><figcaption><span><directory "="" library="" webserver="" documents"="">```</directory></span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">修改为</span><br><span class="line"></span><br><span class="line">```DocumentRoot &quot;/Users/lixiaoyun/Projects/webserver&quot;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><figcaption><span>"/Users/lixiaoyun/Projects/webserver">```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">重启服务器即可</span><br><span class="line"></span><br><span class="line">### mysql</span><br><span class="line">没有自带mysql，需要自己到[官网](https://dev.mysql.com/downloads/mysql/)下载安装。下载dmg后双击一步一步安装，最后会给出root@localhost:临时密码 的提示，这个临时密码，务必保存下来。</span><br><span class="line"></span><br><span class="line">进入系统偏好设置，点击mysql。</span><br><span class="line"></span><br><span class="line">点击start mysql server</span><br><span class="line"></span><br><span class="line">打开终端，输入命令(temppassword替换为之前保存的临时密码)。</span><br><span class="line">```/usr/local/mysql/bin/mysqladmin -u root -p&apos;temppassword&apos; password &apos;newpassword&apos;</span><br></pre></td></tr></table></figure>
-<h3 id="phpmyadmin"><a href="#phpmyadmin" class="headerlink" title="phpmyadmin"></a>phpmyadmin</h3><p>直接到<a href="https://www.phpmyadmin.net/downloads/" target="_blank" rel="noopener">官网</a>下载最新的zip包，建议下载多语言版本，支持简体中文。下载完成后，将解压后的文件夹重命名为<code>phpMyAdmin</code>，然后放到自定义的apache默认路径下。</p>
-<p>在浏览器中输入<code>localhost/phpMyAdmin</code>，出现mysql登录页面，在该页面可以设置为中文，用root和设置的密码登录即可。</p>
-<p><a href="https://blog.csdn.net/intheair100/article/details/54667519" target="_blank" rel="noopener">参考链接一</a></p>
-
+            
           
         
       
@@ -1570,7 +1689,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
