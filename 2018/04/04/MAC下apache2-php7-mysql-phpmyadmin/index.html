@@ -85,7 +85,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/04/04/MAC下apache2-php7-mysql-phpmyadmin/index.html">
 <meta property="og:site_name" content="画船听雨眠">
 <meta property="og:description" content="MAC下apache2+php7+mysql+phpmyadminmacOS High Sierra 10.13.3自带了apache 2.4.8和php7.1.7，但默认情况下未开启 开启apache21sudo apachectl start 停止apache2 1sudo apachectl stop 重启apache2 1sudo apachectl restart apache2配置文件">
-<meta property="og:updated_time" content="2018-04-04T03:34:58.390Z">
+<meta property="og:updated_time" content="2018-04-04T07:01:19.320Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MAC下apache2+php7+mysql+phpmyadmin">
 <meta name="twitter:description" content="MAC下apache2+php7+mysql+phpmyadminmacOS High Sierra 10.13.3自带了apache 2.4.8和php7.1.7，但默认情况下未开启 开启apache21sudo apachectl start 停止apache2 1sudo apachectl stop 重启apache2 1sudo apachectl restart apache2配置文件">
@@ -104,7 +104,7 @@
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: 'Penulis'
     },
     algolia: {
       applicationID: '',
@@ -184,7 +184,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Beranda
           </a>
         </li>
       
@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Arsip
           </a>
         </li>
       
@@ -258,7 +258,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Diposting di</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T11:30:43+08:00">
                 2018-04-04
@@ -320,9 +320,9 @@
 <h3 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h3><p>没有自带mysql，需要自己到<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">官网</a>下载安装。下载dmg后双击一步一步安装，最后会给出root@localhost:临时密码 的提示，这个临时密码，务必保存下来。</p>
 <p>进入系统偏好设置，点击mysql。</p>
 <p>点击start mysql server</p>
-<p>打开终端，输入命令(temppassword替换为之前保存的临时密码)。<br><code>/usr/local/mysql/bin/mysqladmin -u root -p&#39;temppassword&#39; password &#39;newpassword&#39;</code></p>
-<h3 id="phpmyadmin"><a href="#phpmyadmin" class="headerlink" title="phpmyadmin"></a>phpmyadmin</h3><p>直接到<a href="https://www.phpmyadmin.net/downloads/" target="_blank" rel="noopener">官网</a>下载最新的zip包，建议下载多语言版本，支持简体中文。下载完成后，将解压后的文件夹重命名为<code>phpMyAdmin</code>，然后放到自定义的apache默认路径下。</p>
-<p>在浏览器中输入<code>localhost/phpMyAdmin</code>，出现mysql登录页面，在该页面可以设置为中文，用root和设置的密码登录即可。</p>
+<p>打开终端，输入命令(temppassword替换为之前保存的临时密码)。<br><figure class="highlight plain"><figcaption><span>-u root -p'temppassword' password 'newpassword'```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### phpmyadmin</span><br><span class="line">直接到[官网](https://www.phpmyadmin.net/downloads/)下载最新的zip包，建议下载多语言版本，支持简体中文。下载完成后，将解压后的文件夹重命名为`phpMyAdmin`，然后放到自定义的apache默认路径下。</span><br><span class="line"></span><br><span class="line">在浏览器中输入`localhost/phpMyAdmin`，出现mysql登录页面，在该页面可以设置为中文，用root和设置的密码登录即可。</span><br><span class="line"></span><br><span class="line">### 修复“2002 MySQL Socket error”</span><br><span class="line"></span><br><span class="line">如果出现`“2002 MySQL Socket error”`错误，表示无法找到支持MySQL的c/s通信的socket。原因是MySQL将其放在 `/tmp` 目录，而OSX将其放在 `/var/mysql` 目录。所以我们只需要创建一个软链接，输入以下两个命令即可。</span><br><span class="line"></span><br><span class="line">创建目录：</span><br></pre></td></tr></table></figure></p>
+<p>sudo mkdir /var/mysql<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">创建软链接：</span><br></pre></td></tr></table></figure></p>
+<p>sudo ln -s /tmp/mysql.sock /var/mysql/mysql.sock<br>```</p>
 <p><a href="https://blog.csdn.net/intheair100/article/details/54667519" target="_blank" rel="noopener">参考链接一</a></p>
 
       
@@ -414,10 +414,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
+            Daftar Isi
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
+            Ikhtisar
           </li>
         </ul>
       
@@ -437,8 +437,8 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">posting</span>
                 </a>
               </div>
             
@@ -451,7 +451,7 @@
               <div class="site-state-item site-state-tags">
                 
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-name">tags</span>
                 
               </div>
             
@@ -483,7 +483,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC下apache2-php7-mysql-phpmyadmin"><span class="nav-text">MAC下apache2+php7+mysql+phpmyadmin</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开启apache2"><span class="nav-text">开启apache2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启php"><span class="nav-text">开启php</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改apache2网站默认目录"><span class="nav-text">修改apache2网站默认目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql"><span class="nav-text">mysql</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#phpmyadmin"><span class="nav-text">phpmyadmin</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MAC下apache2-php7-mysql-phpmyadmin"><span class="nav-text">MAC下apache2+php7+mysql+phpmyadmin</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#开启apache2"><span class="nav-text">开启apache2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启php"><span class="nav-text">开启php</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改apache2网站默认目录"><span class="nav-text">修改apache2网站默认目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql"><span class="nav-text">mysql</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -513,7 +513,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
@@ -521,7 +521,7 @@
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">Tema &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
 
 
 

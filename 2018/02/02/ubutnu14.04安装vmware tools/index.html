@@ -79,16 +79,13 @@
 
 
 
-<meta name="description" content="问题Mac用mounty挂载移动硬盘，编辑过的文件，有时候会出现“xx.xx已被OS X使用，无法打开”的问题。 解决方案 打开终端，进入硬盘目录 1cd /Volumes 终端 ls -al 命令一下就可以看到：-rwxr-xr-x@，文件的读写权限中被加上了一个@符号，这就是 Mac OS X 文件系统的附加属性（extended attributes）。 在终端里输入 xattr -l ，然">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac OS彻底解决文件被os x系统占用无法打开问题">
-<meta property="og:url" content="http://yoursite.com/2018/01/07/Mac-OS彻底解决文件被os-x系统占用无法打开问题/index.html">
+<meta property="og:title" content="画船听雨眠">
+<meta property="og:url" content="http://yoursite.com/2018/02/02/ubutnu14.04安装vmware tools/index.html">
 <meta property="og:site_name" content="画船听雨眠">
-<meta property="og:description" content="问题Mac用mounty挂载移动硬盘，编辑过的文件，有时候会出现“xx.xx已被OS X使用，无法打开”的问题。 解决方案 打开终端，进入硬盘目录 1cd /Volumes 终端 ls -al 命令一下就可以看到：-rwxr-xr-x@，文件的读写权限中被加上了一个@符号，这就是 Mac OS X 文件系统的附加属性（extended attributes）。 在终端里输入 xattr -l ，然">
-<meta property="og:updated_time" content="2018-01-11T05:00:48.340Z">
+<meta property="og:updated_time" content="2018-04-04T03:38:42.219Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac OS彻底解决文件被os x系统占用无法打开问题">
-<meta name="twitter:description" content="问题Mac用mounty挂载移动硬盘，编辑过的文件，有时候会出现“xx.xx已被OS X使用，无法打开”的问题。 解决方案 打开终端，进入硬盘目录 1cd /Volumes 终端 ls -al 命令一下就可以看到：-rwxr-xr-x@，文件的读写权限中被加上了一个@符号，这就是 Mac OS X 文件系统的附加属性（extended attributes）。 在终端里输入 xattr -l ，然">
+<meta name="twitter:title" content="画船听雨眠">
 
 
 
@@ -118,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/07/Mac-OS彻底解决文件被os-x系统占用无法打开问题/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/02/ubutnu14.04安装vmware tools/"/>
 
 
 
 
 
-  <title>Mac OS彻底解决文件被os x系统占用无法打开问题 | 画船听雨眠</title>
+  <title> | 画船听雨眠</title>
   
 
 
@@ -231,7 +228,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/07/Mac-OS彻底解决文件被os-x系统占用无法打开问题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/ubutnu14.04安装vmware tools/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yoyoyun">
@@ -248,7 +245,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mac OS彻底解决文件被os x系统占用无法打开问题</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -260,8 +257,8 @@
               
                 <span class="post-meta-item-text">Diposting di</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-07T20:40:03+08:00">
-                2018-01-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-02T14:50:55+08:00">
+                2018-02-02
               </time>
             
 
@@ -298,30 +295,7 @@
       
 
       
-        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>Mac用mounty挂载移动硬盘，编辑过的文件，有时候会出现“xx.xx已被OS X使用，无法打开”的问题。</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p> 打开终端，进入硬盘目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /Volumes</span><br></pre></td></tr></table></figure>
-<p>终端 ls -al 命令一下就可以看到：-rwxr-xr-x@，文件的读写权限中被加上了一个@符号，这就是 Mac OS X 文件系统的附加属性（extended attributes）。</p>
-<p>在终端里输入 xattr -l ，然后把出问题的文件拖动到 “xattr -l”后面,回车，可以查看详细的附加属性内容,可看到文件中多了扩展属性com.apple.FinderInfo。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xattr -l /Users/liuxianzhi/Desktop/屏幕快照\ 2016-03-12\ 21.37.25.png</span><br></pre></td></tr></table></figure>
-<p>查到博客解决方案推荐：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xattr -d com.apple.FinderInfo XXX.txt</span><br></pre></td></tr></table></figure>
-<p>确实能够删除扩展属性，但是发现过了不久又重新出现文档变灰无法打开情况，须重复执行命令。</p>
-<h2 id="彻底解决方案"><a href="#彻底解决方案" class="headerlink" title="彻底解决方案"></a>彻底解决方案</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xattr -c *.txt</span><br></pre></td></tr></table></figure>
-<p>-c 参数去除当前文件夹中所有 txt 的附加属性。再次 ls -al 可以发现没有了@符号。</p>
-<p>过一段时间之后也并未出现无法打开情形，可认为此问题已彻底解决。</p>
-<p>上一行划掉…orz,重新插盘之后又变成灰色，无法打开。解决方法待继续探索…</p>
-<h2 id="批量处理方案"><a href="#批量处理方案" class="headerlink" title="批量处理方案"></a>批量处理方案</h2><p>方案一：（未实践）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xattr -c -r ./*</span><br></pre></td></tr></table></figure>
-<p>-r 表示遍历文件夹中的文件。</p>
-<p>方案二：（已实践，可行）</p>
-<p>遍历当前文件夹下所有的文件。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -<span class="built_in">exec</span> xattr -c &#123;&#125; \;</span><br></pre></td></tr></table></figure>
-<p>参考链接: </p>
-<p><a href="https://www.jianshu.com/p/3782d73cb3e8" target="_blank" rel="noopener">参考地址一</a></p>
-<p><a href="http://blog.csdn.net/wejfoasdbsdg/article/details/77984496" target="_blank" rel="noopener">参考地址二</a></p>
-<p><a href="https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/xattr.1.html" target="_blank" rel="noopener">参考地址三</a></p>
-
+        
       
     </div>
     
@@ -345,8 +319,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/04/Mac上搭建基于GitHub-Pages的Hexo博客/" rel="next" title="Mac上搭建基于GitHub Pages的Hexo博客">
-                <i class="fa fa-chevron-left"></i> Mac上搭建基于GitHub Pages的Hexo博客
+              <a href="/2018/01/08/Linux常用命令/" rel="next" title="Linux常用命令">
+                <i class="fa fa-chevron-left"></i> Linux常用命令
               </a>
             
           </div>
@@ -355,8 +329,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/08/Linux常用命令/" rel="prev" title="Linux常用命令">
-                Linux常用命令 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/02/02/Ubuntu16.04安装python3.6/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -409,17 +383,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Daftar Isi
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Ikhtisar
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -470,22 +435,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#彻底解决方案"><span class="nav-text">彻底解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#批量处理方案"><span class="nav-text">批量处理方案</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
