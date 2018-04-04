@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="#ubuntu14.04安装apache2+php+mysqlsudo apt-get update 安装Apache2：sudo apt-get install apache2 安装PHP模块：sudo apt-get install php5 安装Mysql：sudo apt-get install mysql-server 输入root用户密码 其他模块安装：sudo apt-get ins">
+<meta name="description" content="#ubuntu14.04安装apache2+php+mysqlsudo apt-get update 安装Apache2：sudo apt-get install apache2 安装PHP模块：sudo apt-get install php 安装Mysql：sudo apt-get install mysql-server 输入root用户密码 安装phpmyadmin其他模块安装：sudo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="画船听雨眠">
-<meta property="og:url" content="http://yoursite.com/2018/02/02/Ubuntu16.04安装python3.6/index.html">
+<meta property="og:title" content="ubuntu14.04安装apache2+php+mysql">
+<meta property="og:url" content="http://yoursite.com/2018/04/04/ubuntu14-04安装apache2-php-mysql/index.html">
 <meta property="og:site_name" content="画船听雨眠">
-<meta property="og:description" content="#ubuntu14.04安装apache2+php+mysqlsudo apt-get update 安装Apache2：sudo apt-get install apache2 安装PHP模块：sudo apt-get install php5 安装Mysql：sudo apt-get install mysql-server 输入root用户密码 其他模块安装：sudo apt-get ins">
-<meta property="og:updated_time" content="2018-02-02T08:30:55.860Z">
+<meta property="og:description" content="#ubuntu14.04安装apache2+php+mysqlsudo apt-get update 安装Apache2：sudo apt-get install apache2 安装PHP模块：sudo apt-get install php 安装Mysql：sudo apt-get install mysql-server 输入root用户密码 安装phpmyadmin其他模块安装：sudo">
+<meta property="og:updated_time" content="2018-04-04T03:37:27.903Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="画船听雨眠">
-<meta name="twitter:description" content="#ubuntu14.04安装apache2+php+mysqlsudo apt-get update 安装Apache2：sudo apt-get install apache2 安装PHP模块：sudo apt-get install php5 安装Mysql：sudo apt-get install mysql-server 输入root用户密码 其他模块安装：sudo apt-get ins">
+<meta name="twitter:title" content="ubuntu14.04安装apache2+php+mysql">
+<meta name="twitter:description" content="#ubuntu14.04安装apache2+php+mysqlsudo apt-get update 安装Apache2：sudo apt-get install apache2 安装PHP模块：sudo apt-get install php 安装Mysql：sudo apt-get install mysql-server 输入root用户密码 安装phpmyadmin其他模块安装：sudo">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/02/Ubuntu16.04安装python3.6/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/04/ubuntu14-04安装apache2-php-mysql/"/>
 
 
 
 
 
-  <title> | 画船听雨眠</title>
+  <title>ubuntu14.04安装apache2+php+mysql | 画船听雨眠</title>
   
 
 
@@ -231,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/Ubuntu16.04安装python3.6/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/ubuntu14-04安装apache2-php-mysql/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yoyoyun">
@@ -248,7 +248,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">ubuntu14.04安装apache2+php+mysql</h1>
         
 
         <div class="post-meta">
@@ -260,8 +260,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-02T15:54:22+08:00">
-                2018-02-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T11:37:06+08:00">
+                2018-04-04
               </time>
             
 
@@ -300,15 +300,15 @@
       
         <p>#ubuntu14.04安装apache2+php+mysql<br><code>sudo apt-get update</code></p>
 <h2 id="安装Apache2："><a href="#安装Apache2：" class="headerlink" title="安装Apache2："></a>安装Apache2：</h2><p><code>sudo apt-get install apache2</code></p>
-<h2 id="安装PHP模块："><a href="#安装PHP模块：" class="headerlink" title="安装PHP模块："></a>安装PHP模块：</h2><p><code>sudo apt-get install php5</code></p>
+<h2 id="安装PHP模块："><a href="#安装PHP模块：" class="headerlink" title="安装PHP模块："></a>安装PHP模块：</h2><p><code>sudo apt-get install php</code></p>
 <h2 id="安装Mysql："><a href="#安装Mysql：" class="headerlink" title="安装Mysql："></a>安装Mysql：</h2><p><code>sudo apt-get install mysql-server</code></p>
 <p>输入root用户密码</p>
-<h2 id="其他模块安装："><a href="#其他模块安装：" class="headerlink" title="其他模块安装："></a>其他模块安装：</h2><p><code>sudo apt-get install libapache2-mod-php5</code></p>
+<h2 id="安装phpmyadmin"><a href="#安装phpmyadmin" class="headerlink" title="安装phpmyadmin"></a>安装phpmyadmin</h2><h2 id="其他模块安装："><a href="#其他模块安装：" class="headerlink" title="其他模块安装："></a>其他模块安装：</h2><p><code>sudo apt-get install libapache2-mod-php</code></p>
 <p><code>sudo apt-get install libapache2-mod-auth-mysql</code></p>
 <p>上面两个的作用是，apache能够解析php，需要借助这两个模块来找到php engine</p>
-<p><code>sudo apt-get install php5-mysql</code></p>
+<p><code>sudo apt-get install php-mysql</code></p>
 <p>上面语句是在php操作mysql数据库时用到</p>
-<p><code>sudo apt-get install php5-gd</code></p>
+<p><code>sudo apt-get install php-gd</code></p>
 <p>上面语句是GD库</p>
 <h2 id="apache2相关配置"><a href="#apache2相关配置" class="headerlink" title="apache2相关配置"></a>apache2相关配置</h2><p>apache2基本上所有的配置都在<code>/etc/apache2</code>目录及子目录下完成</p>
 <h3 id="apache根目录"><a href="#apache根目录" class="headerlink" title="apache根目录"></a>apache根目录</h3><p><code>/var/www</code></p>
@@ -319,7 +319,7 @@
 <p>在其后面添加</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Include /etc/apache2/mods-available/php5.load</span><br><span class="line">Include /etc/apache2/mods-available/php5.conf</span><br></pre></td></tr></table></figure>
 <h4 id="法二："><a href="#法二：" class="headerlink" title="法二："></a>法二：</h4><p>将这两个文件链接到mods-enabled目录下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /etc/apache2/mods-available/php5.load /etc/apache2/mods-enabled/php5.load</span><br><span class="line">sudo ln -s /etc/apache2/mods-available/php5.conf /etc/apache2/mods-enabled/php5.conf</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /etc/apache2/mods-available/php.load /etc/apache2/mods-enabled/php.load</span><br><span class="line">sudo ln -s /etc/apache2/mods-available/php.conf /etc/apache2/mods-enabled/php.conf</span><br></pre></td></tr></table></figure>
 <p>这种方式更好一点，没有破坏apache2本身的配置结构</p>
 <h3 id="改变apache2的默认目录"><a href="#改变apache2的默认目录" class="headerlink" title="改变apache2的默认目录"></a>改变apache2的默认目录</h3><h4 id="法一：-1"><a href="#法一：-1" class="headerlink" title="法一："></a>法一：</h4><p>apache2的默认目录配置在<code>/etc/apache2/sites-enabled/00default</code>文件中</p>
 <p>找到<code>DocumentRoot</code>项，将<code>/var/www</code>改为目标目录即可</p>
@@ -367,8 +367,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/02/ubutnu14.04安装vmware tools/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2018/04/04/MAC下apache2-php7-mysql-phpmyadmin/" rel="next" title="MAC下apache2+php7+mysql+phpmyadmin">
+                <i class="fa fa-chevron-left"></i> MAC下apache2+php7+mysql+phpmyadmin
               </a>
             
           </div>
@@ -377,8 +377,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/02/02/Ubuntu14.04安装apache2+php+mysql/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/04/ubutnu14-04安装vmware-tools/" rel="prev" title="ubutnu14.04安装vmware tools">
+                ubutnu14.04安装vmware tools <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -456,7 +456,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
@@ -502,7 +502,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Apache2："><span class="nav-text">安装Apache2：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装PHP模块："><span class="nav-text">安装PHP模块：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Mysql："><span class="nav-text">安装Mysql：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他模块安装："><span class="nav-text">其他模块安装：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#apache2相关配置"><span class="nav-text">apache2相关配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#apache根目录"><span class="nav-text">apache根目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#apache2配置文件"><span class="nav-text">apache2配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP解析"><span class="nav-text">PHP解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#法一："><span class="nav-text">法一：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#法二："><span class="nav-text">法二：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改变apache2的默认目录"><span class="nav-text">改变apache2的默认目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#法一：-1"><span class="nav-text">法一：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#法二：-1"><span class="nav-text">法二：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改apache2运行用户和用户组"><span class="nav-text">修改apache2运行用户和用户组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从网页禁止访问目录"><span class="nav-text">从网页禁止访问目录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令"><span class="nav-text">常用命令</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Apache2："><span class="nav-text">安装Apache2：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装PHP模块："><span class="nav-text">安装PHP模块：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Mysql："><span class="nav-text">安装Mysql：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装phpmyadmin"><span class="nav-text">安装phpmyadmin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他模块安装："><span class="nav-text">其他模块安装：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#apache2相关配置"><span class="nav-text">apache2相关配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#apache根目录"><span class="nav-text">apache根目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#apache2配置文件"><span class="nav-text">apache2配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP解析"><span class="nav-text">PHP解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#法一："><span class="nav-text">法一：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#法二："><span class="nav-text">法二：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改变apache2的默认目录"><span class="nav-text">改变apache2的默认目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#法一：-1"><span class="nav-text">法一：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#法二：-1"><span class="nav-text">法二：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改apache2运行用户和用户组"><span class="nav-text">修改apache2运行用户和用户组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从网页禁止访问目录"><span class="nav-text">从网页禁止访问目录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令"><span class="nav-text">常用命令</span></a></li></ol></div>
             
 
           </div>

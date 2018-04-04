@@ -228,6 +228,290 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/ubutnu14-04安装vmware-tools/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yoyoyun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="画船听雨眠">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/04/ubutnu14-04安装vmware-tools/" itemprop="url">ubutnu14.04安装vmware tools</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T11:38:26+08:00">
+                2018-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#ubutnu14.04安装vmware tools<br>1.vmware workstation“虚拟机”选项卡选择“安装 VMware tools”<br>2.ubuntu虚拟机中会弹出挂载的CD-ROM“vmware tools”盘<br>3.将盘中的压缩包“vmware tools-版本号.tar.gz”提取到桌面上<br>4.cd 进入桌面解压后的文件夹<br>5.执行安装命令 sudo ./vmware-install.pl（或者以root用户身份安装）<br>6.一路enter，安装完毕<br>7.重启</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/ubuntu14-04安装apache2-php-mysql/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yoyoyun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="画船听雨眠">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/04/ubuntu14-04安装apache2-php-mysql/" itemprop="url">ubuntu14.04安装apache2+php+mysql</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T11:37:06+08:00">
+                2018-04-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#ubuntu14.04安装apache2+php+mysql<br><code>sudo apt-get update</code></p>
+<h2 id="安装Apache2："><a href="#安装Apache2：" class="headerlink" title="安装Apache2："></a>安装Apache2：</h2><p><code>sudo apt-get install apache2</code></p>
+<h2 id="安装PHP模块："><a href="#安装PHP模块：" class="headerlink" title="安装PHP模块："></a>安装PHP模块：</h2><p><code>sudo apt-get install php</code></p>
+<h2 id="安装Mysql："><a href="#安装Mysql：" class="headerlink" title="安装Mysql："></a>安装Mysql：</h2><p><code>sudo apt-get install mysql-server</code></p>
+<p>输入root用户密码</p>
+<h2 id="安装phpmyadmin"><a href="#安装phpmyadmin" class="headerlink" title="安装phpmyadmin"></a>安装phpmyadmin</h2><h2 id="其他模块安装："><a href="#其他模块安装：" class="headerlink" title="其他模块安装："></a>其他模块安装：</h2><p><code>sudo apt-get install libapache2-mod-php</code></p>
+<p><code>sudo apt-get install libapache2-mod-auth-mysql</code></p>
+<p>上面两个的作用是，apache能够解析php，需要借助这两个模块来找到php engine</p>
+<p><code>sudo apt-get install php-mysql</code></p>
+<p>上面语句是在php操作mysql数据库时用到</p>
+<p><code>sudo apt-get install php-gd</code></p>
+<p>上面语句是GD库</p>
+<h2 id="apache2相关配置"><a href="#apache2相关配置" class="headerlink" title="apache2相关配置"></a>apache2相关配置</h2><p>apache2基本上所有的配置都在<code>/etc/apache2</code>目录及子目录下完成</p>
+<h3 id="apache根目录"><a href="#apache根目录" class="headerlink" title="apache根目录"></a>apache根目录</h3><p><code>/var/www</code></p>
+<h3 id="apache2配置文件"><a href="#apache2配置文件" class="headerlink" title="apache2配置文件"></a>apache2配置文件</h3><p><code>etc/apache2/apache2.conf</code><br>这个文件通过包含其他配置文件涵盖了所有的apache2系统配置信息</p>
+<h3 id="PHP解析"><a href="#PHP解析" class="headerlink" title="PHP解析"></a>PHP解析</h3><p>php解析部分的配置在<code>/etc/apache2/mods-available</code>下的<code>php5.conf</code>和<code>php5.load</code>中，而<code>apache2.conf</code>中并没有将这两个文件包含进来，只要包含进去就OK了</p>
+<h4 id="法一："><a href="#法一：" class="headerlink" title="法一："></a>法一：</h4><p>在<code>apache2.conf</code>中找到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#include module configuration:</span><br><span class="line">Include /etc/apache2/mods-enabled/*.load</span><br><span class="line">Include /etc/apache2/mods-enabled/*.conf</span><br></pre></td></tr></table></figure>
+<p>在其后面添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Include /etc/apache2/mods-available/php5.load</span><br><span class="line">Include /etc/apache2/mods-available/php5.conf</span><br></pre></td></tr></table></figure>
+<h4 id="法二："><a href="#法二：" class="headerlink" title="法二："></a>法二：</h4><p>将这两个文件链接到mods-enabled目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /etc/apache2/mods-available/php.load /etc/apache2/mods-enabled/php.load</span><br><span class="line">sudo ln -s /etc/apache2/mods-available/php.conf /etc/apache2/mods-enabled/php.conf</span><br></pre></td></tr></table></figure>
+<p>这种方式更好一点，没有破坏apache2本身的配置结构</p>
+<h3 id="改变apache2的默认目录"><a href="#改变apache2的默认目录" class="headerlink" title="改变apache2的默认目录"></a>改变apache2的默认目录</h3><h4 id="法一：-1"><a href="#法一：-1" class="headerlink" title="法一："></a>法一：</h4><p>apache2的默认目录配置在<code>/etc/apache2/sites-enabled/00default</code>文件中</p>
+<p>找到<code>DocumentRoot</code>项，将<code>/var/www</code>改为目标目录即可</p>
+<h4 id="法二：-1"><a href="#法二：-1" class="headerlink" title="法二："></a>法二：</h4><p>不改变默认目录，在默认目录下面建立一个到目标目录的链接<br>假设目标目录为<code>/home/username/phptest</code>，则建立链接如下<br><code>sudo ln -s /home/username/phptest /var/www/phptest</code><br>这样就可以通过<code>http://localhost/phptest</code>访问目标目录了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">须注意的是，链接文件名中不能含有”.“,否则apache2会将其当作一个文件试图解析而无法达到链接目录的效果</span><br></pre></td></tr></table></figure>
+<p>这种方式更好一点，可以多个工作目录并行开发。</p>
+<h3 id="修改apache2运行用户和用户组"><a href="#修改apache2运行用户和用户组" class="headerlink" title="修改apache2运行用户和用户组"></a>修改apache2运行用户和用户组</h3><p>在apache2.conf文件中找到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># These need to be set in /etc/apache2/envvars</span><br><span class="line">User $&#123;APACHE_RUN_USER&#125;</span><br><span class="line">Group $&#123;APACHE_RUN_GROUP&#125;</span><br></pre></td></tr></table></figure>
+<p>修改为(假设系统用户为lemon 属组为lemon)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># These need to be set in /etc/apache2/envvars</span><br><span class="line">User lemon</span><br><span class="line">Group lemon</span><br></pre></td></tr></table></figure>
+<p>重启apache2</p>
+<h3 id="从网页禁止访问目录"><a href="#从网页禁止访问目录" class="headerlink" title="从网页禁止访问目录"></a>从网页禁止访问目录</h3><p>在apache2.conf文件中找到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory /var/www/&gt;</span><br><span class="line">        Options Indexes FollowSymLinks</span><br><span class="line">        AllowOverride None</span><br><span class="line">        Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
+<p>修改为(去掉第一行中的Indexes)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory /var/www/&gt;</span><br><span class="line">        Options FollowSymLinks</span><br><span class="line">        AllowOverride None</span><br><span class="line">        Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
+<p>重启apache2</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p>apache2重启命令</p>
+<p><code>sudo service apache2 restart</code></p>
+<p>mysql重启</p>
+<p><code>sudo service mysql restart</code></p>
+<p>查看apache版本号</p>
+<p><code>apachectl -v</code></p>
+<p>apache2为开机自启，无需额外设置</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/MAC下apache2-php7-mysql-phpmyadmin/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -451,573 +735,6 @@
 <p>在envname文件夹中建立项目开发即可</p>
 <p>关闭虚拟环境</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/MAC下创建venv虚拟环境/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yoyoyun">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="画船听雨眠">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/04/MAC下创建venv虚拟环境/" itemprop="url">Unbenannt</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T10:49:22+08:00">
-                2018-04-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/Ubuntu14.04安装apache2+php+mysql/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yoyoyun">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="画船听雨眠">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/02/Ubuntu14.04安装apache2+php+mysql/" itemprop="url">Unbenannt</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-02T15:54:22+08:00">
-                2018-02-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>#ubuntu14.04安装apache2+php+mysql<br><code>sudo apt-get update</code></p>
-<h2 id="安装Apache2："><a href="#安装Apache2：" class="headerlink" title="安装Apache2："></a>安装Apache2：</h2><p><code>sudo apt-get install apache2</code></p>
-<h2 id="安装PHP模块："><a href="#安装PHP模块：" class="headerlink" title="安装PHP模块："></a>安装PHP模块：</h2><p><code>sudo apt-get install php</code></p>
-<h2 id="安装Mysql："><a href="#安装Mysql：" class="headerlink" title="安装Mysql："></a>安装Mysql：</h2><p><code>sudo apt-get install mysql-server</code></p>
-<p>输入root用户密码</p>
-<h2 id="安装phpmyadmin"><a href="#安装phpmyadmin" class="headerlink" title="安装phpmyadmin"></a>安装phpmyadmin</h2><h2 id="其他模块安装："><a href="#其他模块安装：" class="headerlink" title="其他模块安装："></a>其他模块安装：</h2><p><code>sudo apt-get install libapache2-mod-php</code></p>
-<p><code>sudo apt-get install libapache2-mod-auth-mysql</code></p>
-<p>上面两个的作用是，apache能够解析php，需要借助这两个模块来找到php engine</p>
-<p><code>sudo apt-get install php-mysql</code></p>
-<p>上面语句是在php操作mysql数据库时用到</p>
-<p><code>sudo apt-get install php-gd</code></p>
-<p>上面语句是GD库</p>
-<h2 id="apache2相关配置"><a href="#apache2相关配置" class="headerlink" title="apache2相关配置"></a>apache2相关配置</h2><p>apache2基本上所有的配置都在<code>/etc/apache2</code>目录及子目录下完成</p>
-<h3 id="apache根目录"><a href="#apache根目录" class="headerlink" title="apache根目录"></a>apache根目录</h3><p><code>/var/www</code></p>
-<h3 id="apache2配置文件"><a href="#apache2配置文件" class="headerlink" title="apache2配置文件"></a>apache2配置文件</h3><p><code>etc/apache2/apache2.conf</code><br>这个文件通过包含其他配置文件涵盖了所有的apache2系统配置信息</p>
-<h3 id="PHP解析"><a href="#PHP解析" class="headerlink" title="PHP解析"></a>PHP解析</h3><p>php解析部分的配置在<code>/etc/apache2/mods-available</code>下的<code>php5.conf</code>和<code>php5.load</code>中，而<code>apache2.conf</code>中并没有将这两个文件包含进来，只要包含进去就OK了</p>
-<h4 id="法一："><a href="#法一：" class="headerlink" title="法一："></a>法一：</h4><p>在<code>apache2.conf</code>中找到</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#include module configuration:</span><br><span class="line">Include /etc/apache2/mods-enabled/*.load</span><br><span class="line">Include /etc/apache2/mods-enabled/*.conf</span><br></pre></td></tr></table></figure>
-<p>在其后面添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Include /etc/apache2/mods-available/php5.load</span><br><span class="line">Include /etc/apache2/mods-available/php5.conf</span><br></pre></td></tr></table></figure>
-<h4 id="法二："><a href="#法二：" class="headerlink" title="法二："></a>法二：</h4><p>将这两个文件链接到mods-enabled目录下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /etc/apache2/mods-available/php.load /etc/apache2/mods-enabled/php.load</span><br><span class="line">sudo ln -s /etc/apache2/mods-available/php.conf /etc/apache2/mods-enabled/php.conf</span><br></pre></td></tr></table></figure>
-<p>这种方式更好一点，没有破坏apache2本身的配置结构</p>
-<h3 id="改变apache2的默认目录"><a href="#改变apache2的默认目录" class="headerlink" title="改变apache2的默认目录"></a>改变apache2的默认目录</h3><h4 id="法一：-1"><a href="#法一：-1" class="headerlink" title="法一："></a>法一：</h4><p>apache2的默认目录配置在<code>/etc/apache2/sites-enabled/00default</code>文件中</p>
-<p>找到<code>DocumentRoot</code>项，将<code>/var/www</code>改为目标目录即可</p>
-<h4 id="法二：-1"><a href="#法二：-1" class="headerlink" title="法二："></a>法二：</h4><p>不改变默认目录，在默认目录下面建立一个到目标目录的链接<br>假设目标目录为<code>/home/username/phptest</code>，则建立链接如下<br><code>sudo ln -s /home/username/phptest /var/www/phptest</code><br>这样就可以通过<code>http://localhost/phptest</code>访问目标目录了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">须注意的是，链接文件名中不能含有”.“,否则apache2会将其当作一个文件试图解析而无法达到链接目录的效果</span><br></pre></td></tr></table></figure>
-<p>这种方式更好一点，可以多个工作目录并行开发。</p>
-<h3 id="修改apache2运行用户和用户组"><a href="#修改apache2运行用户和用户组" class="headerlink" title="修改apache2运行用户和用户组"></a>修改apache2运行用户和用户组</h3><p>在apache2.conf文件中找到</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># These need to be set in /etc/apache2/envvars</span><br><span class="line">User $&#123;APACHE_RUN_USER&#125;</span><br><span class="line">Group $&#123;APACHE_RUN_GROUP&#125;</span><br></pre></td></tr></table></figure>
-<p>修改为(假设系统用户为lemon 属组为lemon)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># These need to be set in /etc/apache2/envvars</span><br><span class="line">User lemon</span><br><span class="line">Group lemon</span><br></pre></td></tr></table></figure>
-<p>重启apache2</p>
-<h3 id="从网页禁止访问目录"><a href="#从网页禁止访问目录" class="headerlink" title="从网页禁止访问目录"></a>从网页禁止访问目录</h3><p>在apache2.conf文件中找到</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory /var/www/&gt;</span><br><span class="line">        Options Indexes FollowSymLinks</span><br><span class="line">        AllowOverride None</span><br><span class="line">        Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
-<p>修改为(去掉第一行中的Indexes)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory /var/www/&gt;</span><br><span class="line">        Options FollowSymLinks</span><br><span class="line">        AllowOverride None</span><br><span class="line">        Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
-<p>重启apache2</p>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p>apache2重启命令</p>
-<p><code>sudo service apache2 restart</code></p>
-<p>mysql重启</p>
-<p><code>sudo service mysql restart</code></p>
-<p>查看apache版本号</p>
-<p><code>apachectl -v</code></p>
-<p>apache2为开机自启，无需额外设置</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/Ubuntu16.04安装python3.6/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yoyoyun">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="画船听雨眠">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/02/Ubuntu16.04安装python3.6/" itemprop="url">Unbenannt</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-02T15:54:22+08:00">
-                2018-02-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>#ubuntu14.04安装apache2+php+mysql<br><code>sudo apt-get update</code></p>
-<h2 id="安装Apache2："><a href="#安装Apache2：" class="headerlink" title="安装Apache2："></a>安装Apache2：</h2><p><code>sudo apt-get install apache2</code></p>
-<h2 id="安装PHP模块："><a href="#安装PHP模块：" class="headerlink" title="安装PHP模块："></a>安装PHP模块：</h2><p><code>sudo apt-get install php5</code></p>
-<h2 id="安装Mysql："><a href="#安装Mysql：" class="headerlink" title="安装Mysql："></a>安装Mysql：</h2><p><code>sudo apt-get install mysql-server</code></p>
-<p>输入root用户密码</p>
-<h2 id="其他模块安装："><a href="#其他模块安装：" class="headerlink" title="其他模块安装："></a>其他模块安装：</h2><p><code>sudo apt-get install libapache2-mod-php5</code></p>
-<p><code>sudo apt-get install libapache2-mod-auth-mysql</code></p>
-<p>上面两个的作用是，apache能够解析php，需要借助这两个模块来找到php engine</p>
-<p><code>sudo apt-get install php5-mysql</code></p>
-<p>上面语句是在php操作mysql数据库时用到</p>
-<p><code>sudo apt-get install php5-gd</code></p>
-<p>上面语句是GD库</p>
-<h2 id="apache2相关配置"><a href="#apache2相关配置" class="headerlink" title="apache2相关配置"></a>apache2相关配置</h2><p>apache2基本上所有的配置都在<code>/etc/apache2</code>目录及子目录下完成</p>
-<h3 id="apache根目录"><a href="#apache根目录" class="headerlink" title="apache根目录"></a>apache根目录</h3><p><code>/var/www</code></p>
-<h3 id="apache2配置文件"><a href="#apache2配置文件" class="headerlink" title="apache2配置文件"></a>apache2配置文件</h3><p><code>etc/apache2/apache2.conf</code><br>这个文件通过包含其他配置文件涵盖了所有的apache2系统配置信息</p>
-<h3 id="PHP解析"><a href="#PHP解析" class="headerlink" title="PHP解析"></a>PHP解析</h3><p>php解析部分的配置在<code>/etc/apache2/mods-available</code>下的<code>php5.conf</code>和<code>php5.load</code>中，而<code>apache2.conf</code>中并没有将这两个文件包含进来，只要包含进去就OK了</p>
-<h4 id="法一："><a href="#法一：" class="headerlink" title="法一："></a>法一：</h4><p>在<code>apache2.conf</code>中找到</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#include module configuration:</span><br><span class="line">Include /etc/apache2/mods-enabled/*.load</span><br><span class="line">Include /etc/apache2/mods-enabled/*.conf</span><br></pre></td></tr></table></figure>
-<p>在其后面添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Include /etc/apache2/mods-available/php5.load</span><br><span class="line">Include /etc/apache2/mods-available/php5.conf</span><br></pre></td></tr></table></figure>
-<h4 id="法二："><a href="#法二：" class="headerlink" title="法二："></a>法二：</h4><p>将这两个文件链接到mods-enabled目录下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /etc/apache2/mods-available/php5.load /etc/apache2/mods-enabled/php5.load</span><br><span class="line">sudo ln -s /etc/apache2/mods-available/php5.conf /etc/apache2/mods-enabled/php5.conf</span><br></pre></td></tr></table></figure>
-<p>这种方式更好一点，没有破坏apache2本身的配置结构</p>
-<h3 id="改变apache2的默认目录"><a href="#改变apache2的默认目录" class="headerlink" title="改变apache2的默认目录"></a>改变apache2的默认目录</h3><h4 id="法一：-1"><a href="#法一：-1" class="headerlink" title="法一："></a>法一：</h4><p>apache2的默认目录配置在<code>/etc/apache2/sites-enabled/00default</code>文件中</p>
-<p>找到<code>DocumentRoot</code>项，将<code>/var/www</code>改为目标目录即可</p>
-<h4 id="法二：-1"><a href="#法二：-1" class="headerlink" title="法二："></a>法二：</h4><p>不改变默认目录，在默认目录下面建立一个到目标目录的链接<br>假设目标目录为<code>/home/username/phptest</code>，则建立链接如下<br><code>sudo ln -s /home/username/phptest /var/www/phptest</code><br>这样就可以通过<code>http://localhost/phptest</code>访问目标目录了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">须注意的是，链接文件名中不能含有”.“,否则apache2会将其当作一个文件试图解析而无法达到链接目录的效果</span><br></pre></td></tr></table></figure>
-<p>这种方式更好一点，可以多个工作目录并行开发。</p>
-<h3 id="修改apache2运行用户和用户组"><a href="#修改apache2运行用户和用户组" class="headerlink" title="修改apache2运行用户和用户组"></a>修改apache2运行用户和用户组</h3><p>在apache2.conf文件中找到</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># These need to be set in /etc/apache2/envvars</span><br><span class="line">User $&#123;APACHE_RUN_USER&#125;</span><br><span class="line">Group $&#123;APACHE_RUN_GROUP&#125;</span><br></pre></td></tr></table></figure>
-<p>修改为(假设系统用户为lemon 属组为lemon)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># These need to be set in /etc/apache2/envvars</span><br><span class="line">User lemon</span><br><span class="line">Group lemon</span><br></pre></td></tr></table></figure>
-<p>重启apache2</p>
-<h3 id="从网页禁止访问目录"><a href="#从网页禁止访问目录" class="headerlink" title="从网页禁止访问目录"></a>从网页禁止访问目录</h3><p>在apache2.conf文件中找到</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory /var/www/&gt;</span><br><span class="line">        Options Indexes FollowSymLinks</span><br><span class="line">        AllowOverride None</span><br><span class="line">        Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
-<p>修改为(去掉第一行中的Indexes)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory /var/www/&gt;</span><br><span class="line">        Options FollowSymLinks</span><br><span class="line">        AllowOverride None</span><br><span class="line">        Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
-<p>重启apache2</p>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p>apache2重启命令</p>
-<p><code>sudo service apache2 restart</code></p>
-<p>mysql重启</p>
-<p><code>sudo service mysql restart</code></p>
-<p>查看apache版本号</p>
-<p><code>apachectl -v</code></p>
-<p>apache2为开机自启，无需额外设置</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/ubutnu14.04安装vmware tools/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yoyoyun">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="画船听雨眠">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/02/ubutnu14.04安装vmware tools/" itemprop="url">Unbenannt</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-02T14:50:55+08:00">
-                2018-02-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>#ubutnu14.04安装vmware tools<br>1.vmware workstation“虚拟机”选项卡选择“安装 VMware tools”<br>2.ubuntu虚拟机中会弹出挂载的CD-ROM“vmware tools”盘<br>3.将盘中的压缩包“vmware tools-版本号.tar.gz”提取到桌面上<br>4.cd 进入桌面解压后的文件夹<br>5.执行安装命令 sudo ./vmware-install.pl（或者以root用户身份安装）<br>6.一路enter，安装完毕<br>7.重启</p>
-
           
         
       
@@ -1699,7 +1416,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
