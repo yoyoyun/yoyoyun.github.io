@@ -85,7 +85,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/01/08/Linux常用命令/index.html">
 <meta property="og:site_name" content="画船听雨眠">
 <meta property="og:description" content=". / ~. 表示当前目录 / 表示根目录 ～ 表示个人目录，以root身份登陆，为/root/，以name登陆，为/home/name/ 切换用户su 输入root密码 exit 退出root用户 创建用户1$ useradd -m username -s /bin/bash 修改密码1$ passwd username 增加管理员权限1$ visudo 找到 root ALL=(ALL) AL">
-<meta property="og:updated_time" content="2018-01-11T05:00:56.507Z">
+<meta property="og:updated_time" content="2018-04-04T02:51:17.463Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux常用命令">
 <meta name="twitter:description" content=". / ~. 表示当前目录 / 表示根目录 ～ 表示个人目录，以root身份登陆，为/root/，以name登陆，为/home/name/ 切换用户su 输入root密码 exit 退出root用户 创建用户1$ useradd -m username -s /bin/bash 修改密码1$ passwd username 增加管理员权限1$ visudo 找到 root ALL=(ALL) AL">
@@ -184,7 +184,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -258,7 +258,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-08T10:28:18+08:00">
                 2018-01-08
@@ -311,6 +311,8 @@
 <p><code>ls -l</code> 查看当前目录下的所有可见文件的详细信息</p>
 <p><code>ls -a</code> 查看当前目录下的所有可见文件及隐藏文件</p>
 <p><code>ls -al</code>查看当前目录下的所有可见文件及隐藏文件的详细信息</p>
+<h2 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h2><p><code>touch file.txt</code> 新建文件<br><code>touch -t 201604041210.20 file.txt</code> 修改文件最新修改时间<br><code>touch -r file1.txt file2.txt</code>将目标文件的修改时间设定成与参考文件的修改时间一致</p>
+<h2 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h2><p>查看当前目录所在目录位置</p>
 <h2 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h2><p>（1）同一目录下为重命名</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mv file1.txt file2.txt        <span class="comment">#重命名文件</span></span><br><span class="line">$ mv directory1/ directory2/    <span class="comment">#重命名目录</span></span><br></pre></td></tr></table></figure>
 <p>（2）不同目录下为移动</p>
@@ -361,6 +363,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/02/ubutnu14.04安装vmware tools/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -414,10 +420,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
+            Overview
           </li>
         </ul>
       
@@ -437,8 +443,8 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -451,7 +457,7 @@
               <div class="site-state-item site-state-tags">
                 
                   <span class="site-state-item-count">1</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-name">tags</span>
                 
               </div>
             
@@ -483,7 +489,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-text">. / ~</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切换用户"><span class="nav-text">切换用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建用户"><span class="nav-text">创建用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改密码"><span class="nav-text">修改密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增加管理员权限"><span class="nav-text">增加管理员权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ls"><span class="nav-text">ls</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mv"><span class="nav-text">mv</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rm"><span class="nav-text">rm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-text">. / ~</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#切换用户"><span class="nav-text">切换用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建用户"><span class="nav-text">创建用户</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改密码"><span class="nav-text">修改密码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#增加管理员权限"><span class="nav-text">增加管理员权限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ls"><span class="nav-text">ls</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#touch"><span class="nav-text">touch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#pwd"><span class="nav-text">pwd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mv"><span class="nav-text">mv</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#rm"><span class="nav-text">rm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-text">参考链接</span></a></li></ol></div>
             
 
           </div>
@@ -513,7 +519,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 

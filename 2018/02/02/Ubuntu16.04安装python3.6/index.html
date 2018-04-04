@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="#ubuntu14.04安装apache2+php+mysqlsudo apt-get update 安装Apache2：sudo apt-get install apache2 安装PHP模块：sudo apt-get install php5 安装Mysql：sudo apt-get install mysql-server 输入root用户密码 其他模块安装：sudo apt-get ins">
+<meta property="og:type" content="article">
+<meta property="og:title" content="画船听雨眠">
+<meta property="og:url" content="http://yoursite.com/2018/02/02/Ubuntu16.04安装python3.6/index.html">
+<meta property="og:site_name" content="画船听雨眠">
+<meta property="og:description" content="#ubuntu14.04安装apache2+php+mysqlsudo apt-get update 安装Apache2：sudo apt-get install apache2 安装PHP模块：sudo apt-get install php5 安装Mysql：sudo apt-get install mysql-server 输入root用户密码 其他模块安装：sudo apt-get ins">
+<meta property="og:updated_time" content="2018-02-02T08:30:55.860Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="画船听雨眠">
+<meta name="twitter:description" content="#ubuntu14.04安装apache2+php+mysqlsudo apt-get update 安装Apache2：sudo apt-get install apache2 安装PHP模块：sudo apt-get install php5 安装Mysql：sudo apt-get install mysql-server 输入root用户密码 其他模块安装：sudo apt-get ins">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/02/02/Ubuntu16.04安装python3.6/"/>
+
+
+
+
+
+  <title> | 画船听雨眠</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">画船听雨眠</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/Ubuntu16.04安装python3.6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yoyoyun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="画船听雨眠">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-02T15:54:22+08:00">
+                2018-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>#ubuntu14.04安装apache2+php+mysql<br><code>sudo apt-get update</code></p>
+<h2 id="安装Apache2："><a href="#安装Apache2：" class="headerlink" title="安装Apache2："></a>安装Apache2：</h2><p><code>sudo apt-get install apache2</code></p>
+<h2 id="安装PHP模块："><a href="#安装PHP模块：" class="headerlink" title="安装PHP模块："></a>安装PHP模块：</h2><p><code>sudo apt-get install php5</code></p>
+<h2 id="安装Mysql："><a href="#安装Mysql：" class="headerlink" title="安装Mysql："></a>安装Mysql：</h2><p><code>sudo apt-get install mysql-server</code></p>
+<p>输入root用户密码</p>
+<h2 id="其他模块安装："><a href="#其他模块安装：" class="headerlink" title="其他模块安装："></a>其他模块安装：</h2><p><code>sudo apt-get install libapache2-mod-php5</code></p>
+<p><code>sudo apt-get install libapache2-mod-auth-mysql</code></p>
+<p>上面两个的作用是，apache能够解析php，需要借助这两个模块来找到php engine</p>
+<p><code>sudo apt-get install php5-mysql</code></p>
+<p>上面语句是在php操作mysql数据库时用到</p>
+<p><code>sudo apt-get install php5-gd</code></p>
+<p>上面语句是GD库</p>
+<h2 id="apache2相关配置"><a href="#apache2相关配置" class="headerlink" title="apache2相关配置"></a>apache2相关配置</h2><p>apache2基本上所有的配置都在<code>/etc/apache2</code>目录及子目录下完成</p>
+<h3 id="apache根目录"><a href="#apache根目录" class="headerlink" title="apache根目录"></a>apache根目录</h3><p><code>/var/www</code></p>
+<h3 id="apache2配置文件"><a href="#apache2配置文件" class="headerlink" title="apache2配置文件"></a>apache2配置文件</h3><p><code>etc/apache2/apache2.conf</code><br>这个文件通过包含其他配置文件涵盖了所有的apache2系统配置信息</p>
+<h3 id="PHP解析"><a href="#PHP解析" class="headerlink" title="PHP解析"></a>PHP解析</h3><p>php解析部分的配置在<code>/etc/apache2/mods-available</code>下的<code>php5.conf</code>和<code>php5.load</code>中，而<code>apache2.conf</code>中并没有将这两个文件包含进来，只要包含进去就OK了</p>
+<h4 id="法一："><a href="#法一：" class="headerlink" title="法一："></a>法一：</h4><p>在<code>apache2.conf</code>中找到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#include module configuration:</span><br><span class="line">Include /etc/apache2/mods-enabled/*.load</span><br><span class="line">Include /etc/apache2/mods-enabled/*.conf</span><br></pre></td></tr></table></figure>
+<p>在其后面添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Include /etc/apache2/mods-available/php5.load</span><br><span class="line">Include /etc/apache2/mods-available/php5.conf</span><br></pre></td></tr></table></figure>
+<h4 id="法二："><a href="#法二：" class="headerlink" title="法二："></a>法二：</h4><p>将这两个文件链接到mods-enabled目录下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo ln -s /etc/apache2/mods-available/php5.load /etc/apache2/mods-enabled/php5.load</span><br><span class="line">sudo ln -s /etc/apache2/mods-available/php5.conf /etc/apache2/mods-enabled/php5.conf</span><br></pre></td></tr></table></figure>
+<p>这种方式更好一点，没有破坏apache2本身的配置结构</p>
+<h3 id="改变apache2的默认目录"><a href="#改变apache2的默认目录" class="headerlink" title="改变apache2的默认目录"></a>改变apache2的默认目录</h3><h4 id="法一：-1"><a href="#法一：-1" class="headerlink" title="法一："></a>法一：</h4><p>apache2的默认目录配置在<code>/etc/apache2/sites-enabled/00default</code>文件中</p>
+<p>找到<code>DocumentRoot</code>项，将<code>/var/www</code>改为目标目录即可</p>
+<h4 id="法二：-1"><a href="#法二：-1" class="headerlink" title="法二："></a>法二：</h4><p>不改变默认目录，在默认目录下面建立一个到目标目录的链接<br>假设目标目录为<code>/home/username/phptest</code>，则建立链接如下<br><code>sudo ln -s /home/username/phptest /var/www/phptest</code><br>这样就可以通过<code>http://localhost/phptest</code>访问目标目录了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">须注意的是，链接文件名中不能含有”.“,否则apache2会将其当作一个文件试图解析而无法达到链接目录的效果</span><br></pre></td></tr></table></figure>
+<p>这种方式更好一点，可以多个工作目录并行开发。</p>
+<h3 id="修改apache2运行用户和用户组"><a href="#修改apache2运行用户和用户组" class="headerlink" title="修改apache2运行用户和用户组"></a>修改apache2运行用户和用户组</h3><p>在apache2.conf文件中找到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># These need to be set in /etc/apache2/envvars</span><br><span class="line">User $&#123;APACHE_RUN_USER&#125;</span><br><span class="line">Group $&#123;APACHE_RUN_GROUP&#125;</span><br></pre></td></tr></table></figure>
+<p>修改为(假设系统用户为lemon 属组为lemon)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># These need to be set in /etc/apache2/envvars</span><br><span class="line">User lemon</span><br><span class="line">Group lemon</span><br></pre></td></tr></table></figure>
+<p>重启apache2</p>
+<h3 id="从网页禁止访问目录"><a href="#从网页禁止访问目录" class="headerlink" title="从网页禁止访问目录"></a>从网页禁止访问目录</h3><p>在apache2.conf文件中找到</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory /var/www/&gt;</span><br><span class="line">        Options Indexes FollowSymLinks</span><br><span class="line">        AllowOverride None</span><br><span class="line">        Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
+<p>修改为(去掉第一行中的Indexes)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Directory /var/www/&gt;</span><br><span class="line">        Options FollowSymLinks</span><br><span class="line">        AllowOverride None</span><br><span class="line">        Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure>
+<p>重启apache2</p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p>apache2重启命令</p>
+<p><code>sudo service apache2 restart</code></p>
+<p>mysql重启</p>
+<p><code>sudo service mysql restart</code></p>
+<p>查看apache版本号</p>
+<p><code>apachectl -v</code></p>
+<p>apache2为开机自启，无需额外设置</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/02/ubutnu14.04安装vmware tools/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/02/Ubuntu14.04安装apache2+php+mysql/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">yoyoyun</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Apache2："><span class="nav-text">安装Apache2：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装PHP模块："><span class="nav-text">安装PHP模块：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装Mysql："><span class="nav-text">安装Mysql：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他模块安装："><span class="nav-text">其他模块安装：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#apache2相关配置"><span class="nav-text">apache2相关配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#apache根目录"><span class="nav-text">apache根目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#apache2配置文件"><span class="nav-text">apache2配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP解析"><span class="nav-text">PHP解析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#法一："><span class="nav-text">法一：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#法二："><span class="nav-text">法二：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#改变apache2的默认目录"><span class="nav-text">改变apache2的默认目录</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#法一：-1"><span class="nav-text">法一：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#法二：-1"><span class="nav-text">法二：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改apache2运行用户和用户组"><span class="nav-text">修改apache2运行用户和用户组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从网页禁止访问目录"><span class="nav-text">从网页禁止访问目录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令"><span class="nav-text">常用命令</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yoyoyun</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>
