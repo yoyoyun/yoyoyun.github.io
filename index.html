@@ -181,7 +181,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -191,7 +191,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -214,6 +214,219 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/14/CSS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yoyoyun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="画船听雨眠">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/14/CSS/" itemprop="url">CSS</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-14T20:58:27+08:00">
+                2018-06-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="CSS版本"><a href="#CSS版本" class="headerlink" title="CSS版本"></a>CSS版本</h1><ul>
+<li>CSS Level 1</li>
+<li>CSS Level 2（CSS 2.1 规范）</li>
+<li>CSS Level 3<ul>
+<li>Color Module Level 3</li>
+<li>Selectors Level 3</li>
+<li>Media Queries</li>
+<li>Fonts Level 3 </li>
+</ul>
+</li>
+</ul>
+<h1 id="CSS规则"><a href="#CSS规则" class="headerlink" title="CSS规则"></a>CSS规则</h1><p><img src="/2018/06/14/CSS/WX20180614-211241@2x.png" alt="meta标签"></p>
+<h1 id="使用CSS"><a href="#使用CSS" class="headerlink" title="使用CSS"></a>使用CSS</h1><p><img src="/2018/06/14/CSS/WX20180614-211451@2x.png" alt="meta标签"></p>
+<ul>
+<li>一般使用第一种方式</li>
+<li>第二种方式为了性能优化，减少HTTP请求时也会用到</li>
+<li>第三种是一定避免的</li>
+</ul>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>/<em> 单行注释 </em>/</p>
+<p>/**</p>
+<ul>
+<li>多行注释<br>*/</li>
+</ul>
+<p>// 是js的注释，但是写在属性前面，那么浏览器会找不到这种属性，相当于声明了一个不存在的属性，就不会执行，但仅限于调试页面临时注释用</p>
+<h1 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h1><ul>
+<li>选择器用来从页面中选择元素，以给它们定义样式</li>
+</ul>
+<h2 id="通配选择器"><a href="#通配选择器" class="headerlink" title="通配选择器"></a>通配选择器</h2><ul>
+<li>用的比较少</li>
+<li><img src="/2018/06/14/CSS/WX20180614-212000@2x.png" alt="meta标签"></li>
+<li><ul>
+<li>指所有元素</li>
+</ul>
+</li>
+</ul>
+<h2 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h2><ul>
+<li><img src="/2018/06/14/CSS/WX20180614-212052@2x.png" alt="meta标签"></li>
+</ul>
+<h2 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h2><ul>
+<li><code>#id</code></li>
+<li><img src="/2018/06/14/CSS/WX20180614-212140@2x.png" alt="meta标签"></li>
+</ul>
+<h2 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h2><ul>
+<li><code>.class</code></li>
+<li><img src="/2018/06/14/CSS/WX20180614-212339@2x.png" alt="meta标签"></li>
+<li>实际项目中用的最多，会把公共样式提出成组件，用class命名</li>
+</ul>
+<h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><h3 id="简单属性选择"><a href="#简单属性选择" class="headerlink" title="简单属性选择"></a>简单属性选择</h3><ul>
+<li><code>元素[属性]</code></li>
+<li><img src="/2018/06/14/CSS/WX20180614-212720@2x.png" alt="meta标签"></li>
+</ul>
+<h3 id="根据具体属性值选择"><a href="#根据具体属性值选择" class="headerlink" title="根据具体属性值选择"></a>根据具体属性值选择</h3><ul>
+<li><code>元素[属性=值]</code>或者<code>[属性=值]</code>，完全串匹配</li>
+<li><img src="/2018/06/14/CSS/WX20180614-212823@2x.png" alt="meta标签"></li>
+</ul>
+<h3 id="根据部分属性值选择"><a href="#根据部分属性值选择" class="headerlink" title="根据部分属性值选择"></a>根据部分属性值选择</h3><ul>
+<li><code>元素[属性~=值]</code>或者<code>[属性~=值]</code></li>
+<li>~，部分选择，属性有多个值，其中空格分开的值中有一项是指定的值即可</li>
+<li><img src="/2018/06/14/CSS/WX20180614-212854@2x.png" alt="meta标签"></li>
+<li>^，开头匹配。选择href属性值以“#”开头的所有元素</li>
+<li><img src="/2018/06/14/CSS/WX20180614-213416@2x.png" alt="meta标签"></li>
+<li>$，结束匹配。选择href属性值以“.jpg”结尾的所有元素</li>
+<li><img src="/2018/06/14/CSS/WX20180614-213536@2x.png" alt="meta标签"></li>
+<li>*，包含匹配。选择class属性值中包含子串“icon-”的所有元素</li>
+<li><img src="/2018/06/14/CSS/WX20180614-213630@2x.png" alt="meta标签"></li>
+</ul>
+<h2 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h2><ul>
+<li>伪类（pseudo-classes）</li>
+<li>基于DOM之外的信息去（比如根据用户和网页的交互状态）选择元素</li>
+<li><img src="/2018/06/14/CSS/WX20180614-215330@2x.png" alt="meta标签"></li>
+<li>active一定是focus</li>
+</ul>
+<h2 id="选择器组合"><a href="#选择器组合" class="headerlink" title="选择器组合"></a>选择器组合</h2><ul>
+<li>组合选择器选中的一定是最后一个元素，前面的元素都是设限的</li>
+</ul>
+<h3 id="直接组合-EF"><a href="#直接组合-EF" class="headerlink" title="直接组合 EF"></a>直接组合 EF</h3><ul>
+<li>中间没有空格，直接组合，既满足E又满足F</li>
+<li>组合时，标签选择器放在最前面</li>
+<li><img src="/2018/06/14/CSS/WX20180614-220035@2x.png" alt="meta标签"></li>
+<li><img src="/2018/06/14/CSS/WX20180614-220153@2x.png" alt="meta标签"></li>
+</ul>
+<h3 id="后代组合-E-F"><a href="#后代组合-E-F" class="headerlink" title="后代组合 E F"></a>后代组合 E F</h3><ul>
+<li>F必须在E的下边，下图会选中article下边所有的p</li>
+<li><img src="/2018/06/14/CSS/WX20180614-220324@2x.png" alt="meta标签"></li>
+</ul>
+<h3 id="亲子组合-E-gt-F"><a href="#亲子组合-E-gt-F" class="headerlink" title="亲子组合 E &gt; F"></a>亲子组合 E &gt; F</h3><ul>
+<li>F必须是E直接的子集</li>
+<li><img src="/2018/06/14/CSS/WX20180614-220516@2x.png" alt="meta标签"></li>
+<li><img src="/2018/06/14/CSS/WX20180614-220615@2x.png" alt="meta标签"></li>
+</ul>
+<h2 id="同时为一组选择器定义样式"><a href="#同时为一组选择器定义样式" class="headerlink" title="同时为一组选择器定义样式"></a>同时为一组选择器定义样式</h2><ul>
+<li>逗号分隔，构成选择器组</li>
+<li><img src="/2018/06/14/CSS/WX20180614-220731@2x.png" alt="meta标签"></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -257,7 +470,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-13T17:42:32+08:00">
                 2018-06-13
@@ -862,7 +1075,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T11:38:26+08:00">
                 2018-04-04
@@ -982,7 +1195,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T11:37:06+08:00">
                 2018-04-04
@@ -1146,7 +1359,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T11:30:43+08:00">
                 2018-04-04
@@ -1305,7 +1518,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T11:26:28+08:00">
                 2018-04-04
@@ -1430,7 +1643,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-08T10:28:18+08:00">
                 2018-01-08
@@ -1581,7 +1794,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-07T20:40:03+08:00">
                 2018-01-07
@@ -1723,7 +1936,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-04T20:40:40+08:00">
                 2018-01-04
@@ -1903,7 +2116,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-04T20:23:42+08:00">
                 2018-01-04
@@ -2035,8 +2248,8 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -2048,8 +2261,8 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
                 
               </div>
             
@@ -2095,7 +2308,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
