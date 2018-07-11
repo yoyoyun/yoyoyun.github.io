@@ -181,7 +181,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -191,7 +191,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -257,7 +257,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-14T20:58:27+08:00">
                 2018-06-14
@@ -1003,7 +1003,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-13T17:42:32+08:00">
                 2018-06-13
@@ -1608,7 +1608,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T11:38:26+08:00">
                 2018-04-04
@@ -1728,7 +1728,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T11:37:06+08:00">
                 2018-04-04
@@ -1892,7 +1892,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T11:30:43+08:00">
                 2018-04-04
@@ -2051,7 +2051,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T11:26:28+08:00">
                 2018-04-04
@@ -2176,7 +2176,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-08T10:28:18+08:00">
                 2018-01-08
@@ -2249,6 +2249,18 @@
 <p><code>-b</code> 若目标目录已有同名文件，则在覆盖之前创建旧文件的备份</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ mv -uv *.txt /home/<span class="built_in">test</span></span><br><span class="line">$ mv -bv *.txt /home/<span class="built_in">test</span></span><br></pre></td></tr></table></figure>
 <h2 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ rm file1.txt       <span class="comment">#删除文件</span></span><br><span class="line">$ rm -r directory1   <span class="comment">#递归删除目录，询问确认</span></span><br><span class="line">$ rm -rf directory1  <span class="comment">#递归删除目录，无须询问</span></span><br></pre></td></tr></table></figure>
+<h2 id="find"><a href="#find" class="headerlink" title="find"></a>find</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">find -<span class="built_in">type</span> f</span><br><span class="line">find -name <span class="string">'pass*'</span></span><br><span class="line">find -name <span class="string">'pass*'</span> -<span class="built_in">exec</span> rm &#123;&#125; \;</span><br><span class="line">find -<span class="built_in">type</span> f -<span class="built_in">exec</span> <span class="built_in">command</span> &#123;&#125; \;</span><br></pre></td></tr></table></figure>
+<h2 id="crontab"><a href="#crontab" class="headerlink" title="crontab"></a>crontab</h2><p>定时任务</p>
+<p>###系统任务<br>可直接修改/etc/crontab，在最后添加任务，每分钟系统会检查此文档，执行相应任务。root用户。格式为<br><code>分钟(0-59) 小时(0-23) 日期(1-31) 月份(1-12) 周(0-7) 指令</code><br>其中，周0和周7都表示星期天</p>
+<ul>
+<li><code>*</code>表示任何时刻都可以</li>
+<li><code>-</code>表示一段时间</li>
+<li><code>,</code>表示分隔时间</li>
+<li><code>/n</code>表示每隔n单位时间间隔</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*/5 * * * * /home/dmtsai/test.sh   <span class="comment">#每五分钟需要执行/home/dmtsai/test.sh一次</span></span><br></pre></td></tr></table></figure>
+<h3 id="非系统任务"><a href="#非系统任务" class="headerlink" title="非系统任务"></a>非系统任务</h3><p>通过<code>crontab -e</code>编辑例行性命令，格式同上，编辑完后<code>:wq</code>保存退出即可。</p>
+<p>查看该用户下的crontab服务是否创建成功， 用<code>crontab -l</code>命令</p>
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="http://blog.csdn.net/u014082714/article/details/44081565" target="_blank" rel="noopener">. / ~</a></p>
 
           
@@ -2327,7 +2339,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-07T20:40:03+08:00">
                 2018-01-07
@@ -2469,7 +2481,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-04T20:40:40+08:00">
                 2018-01-04
@@ -2649,7 +2661,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-01-04T20:23:42+08:00">
                 2018-01-04
@@ -2782,7 +2794,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">10</span>
-                  <span class="site-state-item-name">Artikel</span>
+                  <span class="site-state-item-name">posts</span>
                 </a>
               </div>
             
@@ -2795,7 +2807,7 @@
               <div class="site-state-item site-state-tags">
                 
                   <span class="site-state-item-count">3</span>
-                  <span class="site-state-item-name">Tags</span>
+                  <span class="site-state-item-name">tags</span>
                 
               </div>
             
@@ -2841,7 +2853,7 @@
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
