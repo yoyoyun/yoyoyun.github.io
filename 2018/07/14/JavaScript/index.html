@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JavaScript," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="一、如何写好JavaScript问题1：DOM操作 JavaScript不要用来写改变DOM元素的样式，而应该注重状态 好一点的是把样式写在css中，用js更改类名 最好的是在HTML处用input+label，css用input：checked+label写样式，JavaScript处理一些后续的监听事件 框架都不允许直接操作DOM，防止写坏代码；但类库如jquery为操作DOM提供了方便，无形">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript">
+<meta property="og:url" content="http://yoursite.com/2018/07/14/JavaScript/index.html">
+<meta property="og:site_name" content="画船听雨眠">
+<meta property="og:description" content="一、如何写好JavaScript问题1：DOM操作 JavaScript不要用来写改变DOM元素的样式，而应该注重状态 好一点的是把样式写在css中，用js更改类名 最好的是在HTML处用input+label，css用input：checked+label写样式，JavaScript处理一些后续的监听事件 框架都不允许直接操作DOM，防止写坏代码；但类库如jquery为操作DOM提供了方便，无形">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-075040@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-075232@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-075145@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-075400@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-081754@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-081833@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-081657@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-081539@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-081459@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-080619@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-082116@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-082208@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-083845@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-084102@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-083659@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-083552@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-084652@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-085043@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-085327@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/QQ20180714-150439@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/QQ20180714-150558@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/QQ20180714-150646@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/QQ20180714-151411@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/QQ20180714-151513@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/QQ20180714-151546@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-135933@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-140314@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-140412@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-140516@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-141337@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-141608@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-152703@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-154209@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-175400@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-175603@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-180725@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-183247@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-183909@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-201246@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-201753@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-202246@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-203006@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-203147@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-203303@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-203334@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-203623@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-203758@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-204309@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-204449@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-205156@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-210836@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-211323@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-211253@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-213952@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-215817@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-220541@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180715-221302@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180716-094058@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180716-094335@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180716-094456@2x.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/">
+<meta property="og:image" content="http://yoursite.com/2018/07/14/JavaScript/">
+<meta property="og:updated_time" content="2018-08-10T03:28:18.916Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript">
+<meta name="twitter:description" content="一、如何写好JavaScript问题1：DOM操作 JavaScript不要用来写改变DOM元素的样式，而应该注重状态 好一点的是把样式写在css中，用js更改类名 最好的是在HTML处用input+label，css用input：checked+label写样式，JavaScript处理一些后续的监听事件 框架都不允许直接操作DOM，防止写坏代码；但类库如jquery为操作DOM提供了方便，无形">
+<meta name="twitter:image" content="http://yoursite.com/2018/07/14/JavaScript/WX20180714-075040@2x.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/07/14/JavaScript/"/>
+
+
+
+
+
+  <title>JavaScript | 画船听雨眠</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">画船听雨眠</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/14/JavaScript/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yoyoyun">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="画船听雨眠">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">JavaScript</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-14T07:37:10+08:00">
+                2018-07-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="一、如何写好JavaScript"><a href="#一、如何写好JavaScript" class="headerlink" title="一、如何写好JavaScript"></a>一、如何写好JavaScript</h1><h3 id="问题1：DOM操作"><a href="#问题1：DOM操作" class="headerlink" title="问题1：DOM操作"></a>问题1：DOM操作</h3><ul>
+<li>JavaScript不要用来写改变DOM元素的样式，而应该注重状态</li>
+<li>好一点的是把样式写在css中，用js更改类名</li>
+<li>最好的是在HTML处用input+label，css用input：checked+label写样式，JavaScript处理一些后续的监听事件</li>
+<li>框架都不允许直接操作DOM，防止写坏代码；但类库如jquery为操作DOM提供了方便，无形中鼓励了写坏的代码。所以最好都从原生js写起</li>
+</ul>
+<p><img src="/2018/07/14/JavaScript/WX20180714-075040@2x.png" alt="meta标签"><br><img src="/2018/07/14/JavaScript/WX20180714-075232@2x.png" alt="meta标签"><br><img src="/2018/07/14/JavaScript/WX20180714-075145@2x.png" alt="meta标签"></p>
+<h3 id="问题2：API的设计"><a href="#问题2：API的设计" class="headerlink" title="问题2：API的设计"></a>问题2：API的设计</h3><p><img src="/2018/07/14/JavaScript/WX20180714-075400@2x.png" alt="meta标签"><br><img src="/2018/07/14/JavaScript/WX20180714-081754@2x.png" alt="meta标签"><br><img src="/2018/07/14/JavaScript/WX20180714-081833@2x.png" alt="meta标签"></p>
+<ul>
+<li>版本1：过程耦合+callback hell<br><img src="/2018/07/14/JavaScript/WX20180714-081657@2x.png" alt="meta标签"></li>
+<li><p>版本2：好一点的是避免过程耦合，避免callback hell，用数据抽象即可解决，把数据和状态抽取出来。但依赖于外部变量，封装性不好<br><img src="/2018/07/14/JavaScript/WX20180714-081539@2x.png" alt="meta标签"></p>
+</li>
+<li><p>版本3：所以更好的是区分哪些变量应该封装，哪些应该暴露。内在使用的封装，外在关心的暴露。但可复用性比较差<br><img src="/2018/07/14/JavaScript/WX20180714-081459@2x.png" alt="meta标签"></p>
+</li>
+<li>最好的是版本4，过程抽象，poll（做循环)，bind，高阶函数<br><img src="/2018/07/14/JavaScript/WX20180714-080619@2x.png" alt="meta标签"></li>
+<li>改需求:<br><img src="/2018/07/14/JavaScript/WX20180714-082116@2x.png" alt="meta标签"></li>
+<li>版本5: 把时间抽象出来，用Promise解决问题，抽象出wait方法，还不错<br><img src="/2018/07/14/JavaScript/WX20180714-082208@2x.png" alt="meta标签"></li>
+<li>版本6：高级前端，非常灵活通用，<br><img src="/2018/07/14/JavaScript/WX20180714-083845@2x.png" alt="meta标签"><br><img src="/2018/07/14/JavaScript/WX20180714-084102@2x.png" alt="meta标签"><br><img src="/2018/07/14/JavaScript/WX20180714-083659@2x.png" alt="meta标签"><br><img src="/2018/07/14/JavaScript/WX20180714-083552@2x.png" alt="meta标签"></li>
+</ul>
+<h3 id="JavaScript效率"><a href="#JavaScript效率" class="headerlink" title="JavaScript效率"></a>JavaScript效率</h3><ul>
+<li>面试题<br><img src="/2018/07/14/JavaScript/WX20180714-084652@2x.png" alt="meta标签"></li>
+<li>版本1：复杂度 n平方<br><img src="/2018/07/14/JavaScript/WX20180714-085043@2x.png" alt="meta标签"></li>
+<li>版本2：赞<br><img src="/2018/07/14/JavaScript/WX20180714-085327@2x.png" alt="meta标签"></li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>JavaScript的职责</li>
+<li>api的设计，通用性，抽象性，可扩展性</li>
+<li>好算法，高效率</li>
+</ul>
+<h1 id="二、JavaScript概览"><a href="#二、JavaScript概览" class="headerlink" title="二、JavaScript概览"></a>二、JavaScript概览</h1><h2 id="JavaScript简史"><a href="#JavaScript简史" class="headerlink" title="JavaScript简史"></a>JavaScript简史</h2><p><img src="/2018/07/14/JavaScript/QQ20180714-150439@2x.png" alt="meta标签"></p>
+<h2 id="ECMAScript-Past"><a href="#ECMAScript-Past" class="headerlink" title="ECMAScript Past"></a>ECMAScript Past</h2><p><img src="/2018/07/14/JavaScript/QQ20180714-150558@2x.png" alt="meta标签"></p>
+<h2 id="JavaScript的特点"><a href="#JavaScript的特点" class="headerlink" title="JavaScript的特点"></a>JavaScript的特点</h2><p><img src="/2018/07/14/JavaScript/QQ20180714-150646@2x.png" alt="meta标签"></p>
+<h2 id="JavaScript主要能做什么"><a href="#JavaScript主要能做什么" class="headerlink" title="JavaScript主要能做什么"></a>JavaScript主要能做什么</h2><p><img src="/2018/07/14/JavaScript/QQ20180714-151411@2x.png" alt="meta标签"></p>
+<h2 id="谁在使用JavaScript"><a href="#谁在使用JavaScript" class="headerlink" title="谁在使用JavaScript"></a>谁在使用JavaScript</h2><p><img src="/2018/07/14/JavaScript/QQ20180714-151513@2x.png" alt="meta标签"></p>
+<h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><p><img src="/2018/07/14/JavaScript/QQ20180714-151546@2x.png" alt="meta标签"></p>
+<h2 id="兼容性"><a href="#兼容性" class="headerlink" title="兼容性"></a>兼容性</h2><ul>
+<li>速查:<a href="http://kangax.github.io/compat-table/es5/" target="_blank" rel="noopener">http://kangax.github.io/compat-table/es5/</a></li>
+<li>方案1：shim&amp;polifill<ul>
+<li><a href="https://github.com/es-shims/es5-shim" target="_blank" rel="noopener">https://github.com/es-shims/es5-shim</a></li>
+<li><a href="https://github.com/es-shims/es6-shim" target="_blank" rel="noopener">https://github.com/es-shims/es6-shim</a></li>
+<li><a href="https://polyfill.io/" target="_blank" rel="noopener">https://polyfill.io/</a></li>
+</ul>
+</li>
+<li>方案2：library<ul>
+<li>实际项目里对于兼容IE8以下浏览器建议使用jQuery</li>
+</ul>
+</li>
+<li>方案3：Babel/JSX/TypeScript…</li>
+</ul>
+<h1 id="三、代码风格"><a href="#三、代码风格" class="headerlink" title="三、代码风格"></a>三、代码风格</h1><h2 id="一些特殊的JS“风格”"><a href="#一些特殊的JS“风格”" class="headerlink" title="一些特殊的JS“风格”"></a>一些特殊的JS“风格”</h2><ul>
+<li>IIFE,立即执行的函数表达式，为了有块级作用域，需要写IIFE</li>
+<li>严格模式（use strict）</li>
+<li>模块，require AMD管理，SystemJS模块管理（ESmodel标准）</li>
+</ul>
+<h2 id="代码风格检查工具"><a href="#代码风格检查工具" class="headerlink" title="代码风格检查工具"></a>代码风格检查工具</h2><ul>
+<li>ESLint</li>
+<li>standard</li>
+<li>semistandard，除了强制写分毫，与standard一致</li>
+<li>都有对应编辑器的插件</li>
+<li>git pre commit</li>
+</ul>
+<h1 id="四、变量、值与类型"><a href="#四、变量、值与类型" class="headerlink" title="四、变量、值与类型"></a>四、变量、值与类型</h1><h2 id="关于类型"><a href="#关于类型" class="headerlink" title="关于类型"></a>关于类型</h2><ul>
+<li>弱类型，可以通过强制类型转换</li>
+<li>动态，声明时未指定变量的类型，编译的时候不知道类型，运行的时候根据情况判断<br><img src="/2018/07/14/JavaScript/WX20180715-135933@2x.png" alt="meta标签"></li>
+</ul>
+<h2 id="语言类型"><a href="#语言类型" class="headerlink" title="语言类型"></a>语言类型</h2><ul>
+<li>Undefined, Null, Boolean, String, Symbol, Number, Object</li>
+<li>typeof<br><img src="/2018/07/14/JavaScript/WX20180715-140314@2x.png" alt="meta标签"></li>
+<li>function<br><img src="/2018/07/14/JavaScript/WX20180715-140412@2x.png" alt="meta标签"></li>
+</ul>
+<h2 id="变量声明"><a href="#变量声明" class="headerlink" title="变量声明"></a>变量声明</h2><p><img src="/2018/07/14/JavaScript/WX20180715-140516@2x.png" alt="meta标签"></p>
+<ul>
+<li>var,es1<ul>
+<li>不支持块级作用域</li>
+<li>存在变量提升，变量声明会提升到作用域的最前面，但是不建议利用变量提升做事，还是应在变量声明之后使用变量<br><img src="/2018/07/14/JavaScript/WX20180715-141337@2x.png" alt="meta标签"></li>
+</ul>
+</li>
+<li>let,es6<br><img src="/2018/07/14/JavaScript/WX20180715-141608@2x.png" alt="meta标签"></li>
+<li>const，es5<br><img src="/2018/07/14/JavaScript/WX20180715-152703@2x.png" alt="meta标签"></li>
+</ul>
+<h3 id="不声明直接使用"><a href="#不声明直接使用" class="headerlink" title="不声明直接使用"></a>不声明直接使用</h3><ul>
+<li>严格模式，es5的某些模块推荐使用，但是es6中会有问题</li>
+<li>非严格模式</li>
+</ul>
+<h2 id="抽象相等"><a href="#抽象相等" class="headerlink" title="抽象相等"></a>抽象相等</h2><p><img src="/2018/07/14/JavaScript/WX20180715-154209@2x.png" alt="meta标签"><br><img src="/2018/07/14/JavaScript/WX20180715-175400@2x.png" alt="meta标签"></p>
+<ul>
+<li>哪些值转成bool值的false</li>
+<li>string和+ - 时转换</li>
+<li>除了null和underfined用非严格相等，其他都用严格相等比较</li>
+</ul>
+<h3 id="Bool类型"><a href="#Bool类型" class="headerlink" title="Bool类型"></a>Bool类型</h3><p><img src="/2018/07/14/JavaScript/WX20180715-175603@2x.png" alt="meta标签"></p>
+<ul>
+<li>&amp;&amp; ||短路特性，如果&amp;&amp;左边为0，则不会执行&amp;&amp;右边了。如果||左边为1，则不会执行右边。<br><img src="/2018/07/14/JavaScript/WX20180715-180725@2x.png" alt="meta标签"></li>
+</ul>
+<h3 id="Number"><a href="#Number" class="headerlink" title="Number"></a>Number</h3><p><img src="/2018/07/14/JavaScript/WX20180715-183247@2x.png" alt="meta标签"></p>
+<ul>
+<li>整数有最大值2^53，再往上加会出现精度丢失，再大会自动转换为科学计数法<br><img src="/2018/07/14/JavaScript/WX20180715-183909@2x.png" alt="meta标签"></li>
+</ul>
+<h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3><p><img src="/2018/07/14/JavaScript/WX20180715-201246@2x.png" alt="meta标签"></p>
+<ul>
+<li>规范建议默认使用单引号</li>
+<li>转义字符\n换行，\t缩进，\u unicode 编码</li>
+<li>处理字符<br><img src="/2018/07/14/JavaScript/WX20180715-201753@2x.png" alt="meta标签"></li>
+<li>字符串类型转换<br><img src="/2018/07/14/JavaScript/WX20180715-202246@2x.png" alt="meta标签"></li>
+<li>常用字符串操作<br><img src="/2018/07/14/JavaScript/WX20180715-203006@2x.png" alt="meta标签"></li>
+<li>模板字符串（ES6）<br><img src="/2018/07/14/JavaScript/WX20180715-203147@2x.png" alt="meta标签"></li>
+<li>模板字符串高级用法<br><img src="/2018/07/14/JavaScript/WX20180715-203303@2x.png" alt="meta标签"></li>
+</ul>
+<h3 id="Object"><a href="#Object" class="headerlink" title="Object"></a>Object</h3><p><img src="/2018/07/14/JavaScript/WX20180715-203334@2x.png" alt="meta标签"></p>
+<h4 id="对象的属性和方法"><a href="#对象的属性和方法" class="headerlink" title="对象的属性和方法"></a>对象的属性和方法</h4><p><img src="/2018/07/14/JavaScript/WX20180715-203623@2x.png" alt="meta标签"></p>
+<h4 id="对象创建"><a href="#对象创建" class="headerlink" title="对象创建"></a>对象创建</h4><p><img src="/2018/07/14/JavaScript/WX20180715-203758@2x.png" alt="meta标签"></p>
+<h4 id="属性访问"><a href="#属性访问" class="headerlink" title="属性访问"></a>属性访问</h4><p><img src="/2018/07/14/JavaScript/WX20180715-204309@2x.png" alt="meta标签"></p>
+<h4 id="属性遍历"><a href="#属性遍历" class="headerlink" title="属性遍历"></a>属性遍历</h4><p><img src="/2018/07/14/JavaScript/WX20180715-204449@2x.png" alt="meta标签"></p>
+<h4 id="值和引用"><a href="#值和引用" class="headerlink" title="值和引用"></a>值和引用</h4><ul>
+<li>值类型与引用类型<ul>
+<li>除了object为引用类型其他均为值类型</li>
+</ul>
+</li>
+<li><img src="/2018/07/14/JavaScript/WX20180715-205156@2x.png" alt="meta标签"></li>
+<li>基本类型对应的包装类型<ul>
+<li>带new的为object类型，不带new声明的为原类型。其实没什么卵用，运算完之后又变回原类型 </li>
+<li><img src="/2018/07/14/JavaScript/WX20180715-210836@2x.png" alt="meta标签"></li>
+</ul>
+</li>
+<li>对象的拷贝<br><img src="/2018/07/14/JavaScript/WX20180715-211323@2x.png" alt="meta标签"><br><img src="/2018/07/14/JavaScript/WX20180715-211253@2x.png" alt="meta标签"></li>
+</ul>
+<h4 id="对象的类型与构造器"><a href="#对象的类型与构造器" class="headerlink" title="对象的类型与构造器"></a>对象的类型与构造器</h4><ul>
+<li>new和constructor</li>
+<li>prototype</li>
+<li>instanceOf</li>
+<li>ES6 class</li>
+</ul>
+<h5 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h5><p><img src="/2018/07/14/JavaScript/WX20180715-213952@2x.png" alt="meta标签"></p>
+<ul>
+<li>第一第二种方式是ES5,第三中是原始的</li>
+<li>es5之后直接用object.create</li>
+</ul>
+<h4 id="内置类型"><a href="#内置类型" class="headerlink" title="内置类型"></a>内置类型</h4><p><img src="/2018/07/14/JavaScript/WX20180715-215817@2x.png" alt="meta标签"></p>
+<h4 id="高级属性"><a href="#高级属性" class="headerlink" title="高级属性"></a>高级属性</h4><ul>
+<li>getter 和setter</li>
+<li>禁止在Object.prototype和Array.prototype添加方法，es5之后好了<br><img src="/2018/07/14/JavaScript/WX20180715-220541@2x.png" alt="meta标签"></li>
+<li>数据绑定视图 model与view getter和setter</li>
+</ul>
+<h3 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h3><p><img src="/2018/07/14/JavaScript/WX20180715-221302@2x.png" alt="meta标签"></p>
+<h1 id="五、函数"><a href="#五、函数" class="headerlink" title="五、函数"></a>五、函数</h1><p><img src="/2018/07/14/JavaScript/WX20180716-094058@2x.png" alt="meta标签"></p>
+<h2 id="函数声明和函数表达式"><a href="#函数声明和函数表达式" class="headerlink" title="函数声明和函数表达式"></a>函数声明和函数表达式</h2><ul>
+<li>函数声明会被提升<br><img src="/2018/07/14/JavaScript/WX20180716-094335@2x.png" alt="meta标签"></li>
+<li>箭头函数表达式<br><img src="/2018/07/14/JavaScript/WX20180716-094456@2x.png" alt="meta标签"><h2 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h2></li>
+<li>在函数表达式和回调函数中常见</li>
+</ul>
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><ul>
+<li>是由函数求值时的调用者决定的</li>
+</ul>
+<h2 id="call、apply、bind"><a href="#call、apply、bind" class="headerlink" title="call、apply、bind"></a>call、apply、bind</h2><h1 id="ES6新增"><a href="#ES6新增" class="headerlink" title="ES6新增"></a>ES6新增</h1><h3 id="多行字符串，用反引号表示"><a href="#多行字符串，用反引号表示" class="headerlink" title="多行字符串，用反引号表示"></a>多行字符串，用反引号表示</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">`这是一个</span><br><span class="line">多行</span><br><span class="line">字符串`;</span><br></pre></td></tr></table></figure>
+<h3 id="模板字符串，自动替换字符串中的变量"><a href="#模板字符串，自动替换字符串中的变量" class="headerlink" title="模板字符串，自动替换字符串中的变量"></a>模板字符串，自动替换字符串中的变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var name = &apos;小明&apos;;</span><br><span class="line">var age = 20;</span><br><span class="line">var message = `你好, $&#123;name&#125;, 你今年$&#123;age&#125;岁了!`;</span><br><span class="line">alert(message);</span><br></pre></td></tr></table></figure>
+<h3 id="map和set数据结构"><a href="#map和set数据结构" class="headerlink" title="map和set数据结构"></a>map和set数据结构</h3><ul>
+<li>map</li>
+<li>问题：JavaScript中对象的键名只能为字符串，Object 结构提供了“字符串—值”的对应，但是“键”的范围不限于字符串，各种类型的值（包括对象）都可以当作键。</li>
+<li>解决：Map 结构提供了“值—值”的对应</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//对象名作为键名</span><br><span class="line">const m = new Map();</span><br><span class="line">const o = &#123;p: &apos;Hello World&apos;&#125;;</span><br><span class="line"></span><br><span class="line">m.set(o, &apos;content&apos;)</span><br><span class="line">m.get(o) // &quot;content&quot;</span><br><span class="line"></span><br><span class="line">m.has(o) // true</span><br><span class="line">m.delete(o) // true</span><br><span class="line">m.has(o) // false</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//利用数组构建</span><br><span class="line">const map = new Map([</span><br><span class="line">  [&apos;name&apos;, &apos;张三&apos;],</span><br><span class="line">  [&apos;title&apos;, &apos;Author&apos;]</span><br><span class="line">]); // Map &#123; &apos;name&apos; =&gt; &apos;张三&apos;, &apos;title&apos; =&gt; &apos;Author&apos; &#125;</span><br><span class="line"></span><br><span class="line">map.size // 2</span><br><span class="line">map.has(&apos;name&apos;) // true</span><br><span class="line">map.get(&apos;name&apos;) // &quot;张三&quot;</span><br><span class="line">map.has(&apos;title&apos;) // true</span><br><span class="line">map.get(&apos;title&apos;) // &quot;Author&quot;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>set</li>
+<li>一组不重复的key的集合</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var s1 = new Set(); // 空Set</span><br><span class="line">var s = new Set([1, 2, 3, 3, &apos;3&apos;]); // Set &#123;1, 2, 3, &quot;3&quot;&#125;</span><br><span class="line">s.add(4); // Set &#123;1, 2, 3, &quot;3&quot;, 4&#125;</span><br><span class="line">s.delete(3); // Set &#123;1, 2, &quot;3&quot;, 4&#125;</span><br><span class="line">s.has(2) // true</span><br></pre></td></tr></table></figure>
+<h3 id="iterator遍历器"><a href="#iterator遍历器" class="headerlink" title="iterator遍历器"></a>iterator遍历器</h3><ul>
+<li>遍历器（Iterator）就是这样一种机制。它是一种接口，为各种不同的数据结构提供统一的访问机制。任何数据结构只要部署 Iterator 接口，就可以完成遍历操作（即依次处理该数据结构的所有成员）。</li>
+<li>数组（Array）、对象（Object）、Map和Set。</li>
+<li>Iterator 的作用有三个：一是为各种数据结构，提供一个统一的、简便的访问接口；二是使得数据结构的成员能够按某种次序排列；三是 ES6 创造了一种新的遍历命令for…of循环，Iterator 接口主要供for…of消费。</li>
+<li>一种数据结构只要部署了 Iterator 接口，我们就称这种数据结构是“可遍历的”（iterable）。</li>
+<li>ES6 规定，默认的 Iterator 接口部署在数据结构的Symbol.iterator属性，或者说，一个数据结构只要具有Symbol.iterator属性，就可以认为是“可遍历的”（iterable）。</li>
+<li>原生具备 Iterator 接口的数据结构如下。<br>Array<br>Map<br>Set<br>String<br>TypedArray类似数组的对象(函数的 arguments 对象、NodeList 对象)<br>Generator对象</li>
+<li>对于原生部署 Iterator 接口的数据结构，不用自己写遍历器生成函数，for…of循环会自动遍历它们。除此之外，其他数据结构（主要是对象）的 Iterator 接口，都需要自己在Symbol.iterator属性上面部署，这样才会被for…of循环遍历。<h4 id="与其他遍历语法的比较"><a href="#与其他遍历语法的比较" class="headerlink" title="与其他遍历语法的比较"></a>与其他遍历语法的比较</h4></li>
+<li>以数组为例，JavaScript 提供多种遍历语法。最原始的写法就是for循环。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (var index = 0; index &lt; myArray.length; index++) &#123;</span><br><span class="line">  console.log(myArray[index]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种写法比较麻烦，因此数组提供内置的forEach方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">myArray.forEach(function (value) &#123;</span><br><span class="line">  console.log(value);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>这种写法的问题在于，无法中途跳出forEach循环，break命令或return命令都不能奏效。</p>
+<p>for…in循环可以遍历数组的键名。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (var index in myArray) &#123;</span><br><span class="line">  console.log(myArray[index]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>for…in循环有几个缺点。</p>
+<ul>
+<li>数组的键名是数字，但是for…in循环是以字符串作为键名“0”、“1”、“2”等等。</li>
+<li>for…in循环不仅遍历数字键名，还会遍历手动添加的其他键，甚至包括原型链上的键。<br>某些情况下，</li>
+<li>for…in循环会以任意顺序遍历键名。<br>总之，for…in循环主要是为遍历对象而设计的，不适用于遍历数组。</li>
+</ul>
+<p>for…of循环相比上面几种做法，有一些显著的优点。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for (let value of myArray) &#123;</span><br><span class="line">  console.log(value);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>有着同for…in一样的简洁语法，但是没有for…in那些缺点。</li>
+<li>不同于forEach方法，它可以与break、continue和return配合使用。</li>
+<li>提供了遍历所有数据结构的统一操作接口。</li>
+</ul>
+<h3 id="rest参数"><a href="#rest参数" class="headerlink" title="rest参数"></a>rest参数</h3><ul>
+<li>获得多余的函数参数</li>
+<li>形式为 <code>...变量名</code></li>
+<li>该变量将多余的参数放入数组中，若无多余，为空数组</li>
+<li>只能放在参数列表的最后</li>
+<li>函数的length属性（参数列表长度），不包括rest参数</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function add(...values) &#123;</span><br><span class="line">  let sum = 0;</span><br><span class="line"></span><br><span class="line">  for (var val of values) &#123;</span><br><span class="line">    sum += val;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  return sum;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">add(2, 5, 3) // 10</span><br></pre></td></tr></table></figure>
+<h3 id="变量let与const"><a href="#变量let与const" class="headerlink" title="变量let与const"></a>变量let与const</h3><h4 id="let"><a href="#let" class="headerlink" title="let"></a>let</h4><ul>
+<li>可以申明一个块级作用域的变量</li>
+</ul>
+<h4 id="const"><a href="#const" class="headerlink" title="const"></a>const</h4><ul>
+<li>申明一个常量</li>
+<li>具有块级作用域</li>
+</ul>
+<h3 id="解析赋值"><a href="#解析赋值" class="headerlink" title="解析赋值"></a>解析赋值</h3><ul>
+<li>可以同时对一组变量进行赋值。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var [x, y, z] = [&apos;hello&apos;, &apos;JavaScript&apos;, &apos;ES6&apos;];</span><br></pre></td></tr></table></figure>
+<ul>
+<li>注意，对数组元素进行解构赋值时，多个变量要用[…]括起来。如果数组本身还有嵌套，也可以通过下面的形式进行解构赋值，注意嵌套层次和位置要保持一致。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let [x, [y, z]] = [&apos;hello&apos;, [&apos;JavaScript&apos;, &apos;ES6&apos;]];</span><br><span class="line">x; // &apos;hello&apos;</span><br><span class="line">y; // &apos;JavaScript&apos;</span><br><span class="line">z; // &apos;ES6&apos;</span><br><span class="line">let [, , z] = [&apos;hello&apos;, &apos;JavaScript&apos;, &apos;ES6&apos;]; // 忽略前两个元素，只对z赋值第三个元素</span><br><span class="line">z; // &apos;ES6&apos;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用解构赋值对对象属性进行赋值时，如果对应的属性不存在，变量将被赋值为undefined，这和引用一个不存在的属性获得undefined是一致的。如果要使用的变量名和属性名不一致，可以用下面的语法获取：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var person = &#123;</span><br><span class="line">    name: &apos;小明&apos;,</span><br><span class="line">    age: 20,</span><br><span class="line">    gender: &apos;male&apos;,</span><br><span class="line">    passport: &apos;G-12345678&apos;,</span><br><span class="line">    school: &apos;No.4 middle school&apos;,</span><br><span class="line">    address: &#123;</span><br><span class="line">        city: &apos;Beijing&apos;,</span><br><span class="line">        street: &apos;No.1 Road&apos;,</span><br><span class="line">        zipcode: &apos;100001&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">var &#123;name, address: &#123;city, zipcode:zip&#125;, single=true&#125; = person;</span><br><span class="line">name; // &apos;小明&apos;</span><br><span class="line">city; // &apos;Beijing&apos;</span><br><span class="line">zip; // &apos;100001&apos;</span><br><span class="line">single; //true</span><br></pre></td></tr></table></figure>
+<ul>
+<li>变量已声明</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var x, y;</span><br><span class="line">(&#123;x, y&#125; = &#123; name: &apos;小明&apos;, x: 100, y: 200&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul>
+<li>数组方法</li>
+<li>不改变原数组</li>
+<li>indexOf(元素)搜索，返回索引，无则返回-1</li>
+<li>slice(起始索引,结束索引)截取，含首不含尾，返回新Array。不传参则可用于复制</li>
+<li>concat(另一个array)连接，返回新Array</li>
+<li>join(拼接字符)拼接，返回连接后的字符串</li>
+</ul>
+<ul>
+<li>改变原数组</li>
+<li>push(元素)末尾添加，返回长度值</li>
+<li>pop()末尾删除，返回被删除的元素。空数组继续删返回undefined，不报错</li>
+<li>unshift(元素)头部添加，返回长度值</li>
+<li>shift()头部删除，返回被删除的元素。空数组继续删返回undefined，不报错</li>
+<li>sort()排序</li>
+<li>reverse()反转</li>
+<li>splice(删除的起始索引,删除的长度,添加的元素)万能，返回删除的元素</li>
+</ul>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><ul>
+<li>视为false的6种情况</li>
+<li>0，-0，’’，NaN，undefined，null</li>
+</ul>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><h3 id="变量屏蔽"><a href="#变量屏蔽" class="headerlink" title="变量屏蔽"></a>变量屏蔽</h3><ul>
+<li>JavaScript的函数在查找变量时从自身函数定义开始，从“内”向“外”查找。如果内部函数定义了与外部函数重名的变量，则内部函数的变量将“屏蔽”外部函数的变量。</li>
+</ul>
+<h3 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h3><ul>
+<li>JavaScript的函数定义有个特点，它会先扫描整个函数体的语句，把所有申明的变量“提升”到函数顶部</li>
+</ul>
+<h3 id="全局作用域"><a href="#全局作用域" class="headerlink" title="全局作用域"></a>全局作用域</h3><ul>
+<li>不在任何函数内定义的变量就具有全局作用域。实际上，JavaScript默认有一个全局对象window，全局作用域的变量实际上被绑定到window的一个属性</li>
+<li>全局变量与window.全局变量等价，全局函数名与window.全局函数名等价</li>
+</ul>
+<h3 id="名字空间"><a href="#名字空间" class="headerlink" title="名字空间"></a>名字空间</h3><ul>
+<li>全局变量会绑定到window上，不同的JavaScript文件如果使用了相同的全局变量，或者定义了相同名字的顶层函数，都会造成命名冲突，并且很难被发现。减少冲突的一个方法是把自己的所有变量和函数全部绑定到一个全局变量中</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 唯一的全局变量MYAPP:</span><br><span class="line">var MYAPP = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">// 其他变量:</span><br><span class="line">MYAPP.name = &apos;myapp&apos;;</span><br><span class="line">MYAPP.version = 1.0;</span><br><span class="line"></span><br><span class="line">// 其他函数:</span><br><span class="line">MYAPP.foo = function () &#123;</span><br><span class="line">    return &apos;foo&apos;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>把自己的代码全部放入唯一的名字空间MYAPP中，会大大减少全局变量冲突的可能。<br>许多著名的JavaScript库都是这么干的：jQuery，YUI，underscore等等。</p>
+<h3 id="局部作用域"><a href="#局部作用域" class="headerlink" title="局部作用域"></a>局部作用域</h3><ul>
+<li>等于函数作用域</li>
+</ul>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><ul>
+<li>对象中绑定的函数，称为这个对象的方法</li>
+</ul>
+<h3 id="this-1"><a href="#this-1" class="headerlink" title="this"></a>this</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var xiaoming = &#123;</span><br><span class="line">    name: &apos;小明&apos;,</span><br><span class="line">    birth: 1990,</span><br><span class="line">    age: function () &#123;</span><br><span class="line">        var y = new Date().getFullYear();</span><br><span class="line">        return y - this.birth;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">xiaoming.age; // function xiaoming.age()</span><br><span class="line">xiaoming.age(); // 2018,28,this指向被调用的对象xiaoming</span><br><span class="line">var fn = xiaoming.age; // 先拿到xiaoming的age函数</span><br><span class="line">fn(); // NaN,this指向全局对象window</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function getAge() &#123;</span><br><span class="line">    var y = new Date().getFullYear();</span><br><span class="line">    return y - this.birth;</span><br><span class="line">&#125;</span><br><span class="line">var xiaoming = &#123;</span><br><span class="line">    name: &apos;小明&apos;,</span><br><span class="line">    birth: 1990,</span><br><span class="line">    age: getAge</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var birth = 2000;</span><br><span class="line"></span><br><span class="line">xiaoming.age(); // 2018,28,this指向被调用的对象xiaoming</span><br><span class="line">getAge(); // 2018,18,this指向全局对象window</span><br><span class="line">var fn = xiaoming.age; // 先拿到xiaoming的age函数</span><br><span class="line">fn(); // 2018,18,this指向全局对象window</span><br></pre></td></tr></table></figure>
+<ul>
+<li>要保证this指向正确，必须用obj.xxx()的形式调用！</li>
+<li>由于这是一个巨大的设计错误，要想纠正可没那么简单。ECMA决定，在strict模式下让函数的this指向undefined，因此，在strict模式下，你会得到一个错误：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">//错误一：全局对象报错</span><br><span class="line">&apos;use strict&apos;;</span><br><span class="line"></span><br><span class="line">var xiaoming = &#123;</span><br><span class="line">    name: &apos;小明&apos;,</span><br><span class="line">    birth: 1990,</span><br><span class="line">    age: function () &#123;</span><br><span class="line">        var y = new Date().getFullYear();</span><br><span class="line">        return y - this.birth;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var fn = xiaoming.age;</span><br><span class="line">fn(); // Uncaught TypeError: Cannot read property &apos;birth&apos; of undefined</span><br><span class="line"></span><br><span class="line">//错误二：函数内部报错</span><br><span class="line">&apos;use strict&apos;;</span><br><span class="line"></span><br><span class="line">var xiaoming = &#123;</span><br><span class="line">    name: &apos;小明&apos;,</span><br><span class="line">    birth: 1990,</span><br><span class="line">    age: function () &#123;</span><br><span class="line">        var y = new Date().getFullYear();</span><br><span class="line">        return y - this.birth;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var fn = xiaoming.age;</span><br><span class="line">fn(); // Uncaught TypeError: Cannot read property &apos;birth&apos; of undefined</span><br><span class="line">//原因是this指针只在age方法的函数内指向xiaoming，在函数内部定义的函数，this又指向undefined了！（在非strict模式下，它重新指向全局对象window！）</span><br></pre></td></tr></table></figure>
+<ul>
+<li>错误二修复:用一个that变量首先捕获this：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&apos;use strict&apos;;</span><br><span class="line"></span><br><span class="line">var xiaoming = &#123;</span><br><span class="line">    name: &apos;小明&apos;,</span><br><span class="line">    birth: 1990,</span><br><span class="line">    age: function () &#123;</span><br><span class="line">        var that = this; // 在方法内部一开始就捕获this</span><br><span class="line">        function getAgeFromBirth() &#123;</span><br><span class="line">            var y = new Date().getFullYear();</span><br><span class="line">            return y - that.birth; // 用that而不是this</span><br><span class="line">        &#125;</span><br><span class="line">        return getAgeFromBirth();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">xiaoming.age(); // 25</span><br></pre></td></tr></table></figure>
+<ul>
+<li>控制this的指向：apply()和call()</li>
+<li>要指定函数的this指向哪个对象，可以用函数本身的apply方法，它接收两个参数，第一个参数就是需要绑定的this变量，第二个参数是Array，表示函数本身的参数。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function getAge() &#123;</span><br><span class="line">    var y = new Date().getFullYear();</span><br><span class="line">    return y - this.birth;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var xiaoming = &#123;</span><br><span class="line">    name: &apos;小明&apos;,</span><br><span class="line">    birth: 1990,</span><br><span class="line">    age: getAge</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">xiaoming.age(); // 25</span><br><span class="line">getAge.apply(xiaoming, []); // 25, this指向xiaoming, 参数为空</span><br></pre></td></tr></table></figure>
+<ul>
+<li>apply()与call()的唯一区别:<ul>
+<li>apply()把参数打包成Array再传入；</li>
+<li>call()把参数按顺序传入。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Math.max.apply(null, [3, 5, 4]); // 5</span><br><span class="line">Math.max.call(null, 3, 5, 4); // 5</span><br></pre></td></tr></table></figure>
+<ul>
+<li>对原函数调用，我们通常把this绑定为null。</li>
+</ul>
+<h2 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h2><h3 id="map和reduce"><a href="#map和reduce" class="headerlink" title="map和reduce"></a>map和reduce</h3><ul>
+<li>数组Array的map和reduce方法</li>
+<li>map：调用Array的map()方法，传入自己的函数，就得到了一个新的Array作为结果：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];</span><br><span class="line">arr.map(String); // [&apos;1&apos;, &apos;2&apos;, &apos;3&apos;, &apos;4&apos;, &apos;5&apos;, &apos;6&apos;, &apos;7&apos;, &apos;8&apos;, &apos;9&apos;]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>reduce：Array的reduce()把一个函数作用在这个Array的[x1, x2, x3…]上，这个函数必须接收两个参数，reduce()把结果继续和序列的下一个元素做累积计算</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 3, 5, 7, 9];</span><br><span class="line">arr.reduce(function (x, y) &#123;</span><br><span class="line">    return x + y;</span><br><span class="line">&#125;); // 25</span><br></pre></td></tr></table></figure>
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><ul>
+<li>用于把Array的某些元素过滤掉，然后返回剩下的元素。filter()把传入的函数依次作用于每个元素，然后根据返回值是true还是false决定保留还是丢弃该元素。</li>
+<li>用filter()这个高阶函数，关键在于正确实现一个“筛选”函数。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2, 4, 5, 6, 9, 10, 15];</span><br><span class="line">var r = arr.filter(function (x) &#123;</span><br><span class="line">    return x % 2 !== 0;</span><br><span class="line">&#125;);</span><br><span class="line">r; // [1, 5, 9, 15]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>回调函数</li>
+<li>filter()接收的回调函数，其实可以有多个参数。通常我们仅使用第一个参数，表示Array的某个元素。回调函数还可以接收另外两个参数，表示元素的位置和数组本身：</li>
+<li>利用filter，可以巧妙地去除Array的重复元素：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var</span><br><span class="line">    r,</span><br><span class="line">    arr = [&apos;apple&apos;, &apos;strawberry&apos;, &apos;banana&apos;, &apos;pear&apos;, &apos;apple&apos;, &apos;orange&apos;, &apos;orange&apos;, &apos;strawberry&apos;, &apos;orange&apos;];</span><br><span class="line">    </span><br><span class="line">r = arr.filter(function (element, index, self) &#123;</span><br><span class="line">    return self.indexOf(element) === index;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">console.log(r.toString());//apple,strawberry,banana,pear,orange</span><br></pre></td></tr></table></figure>
+<ul>
+<li>去除重复元素依靠的是indexOf总是返回第一个元素的位置，后续的重复元素位置与indexOf返回的位置不相等，因此被filter滤掉了。</li>
+</ul>
+<h3 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h3><ul>
+<li>对于两个元素x和y，如果认为x &lt; y，则返回-1，如果认为x == y，则返回0，如果认为x &gt; y，则返回1</li>
+<li>Array的sort()方法：默认把所有元素转换成字符串再排序，字符串根据ASCII码进行排序，所以有小写字母a排在大写字母之后，’10’排在了’2’的前面的情况。</li>
+<li>修复：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">var arr = [10, 20, 1, 2];</span><br><span class="line">arr.sort(function (x, y) &#123;</span><br><span class="line">    if (x &lt; y) &#123;</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    if (x &gt; y) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;);</span><br><span class="line">console.log(arr); // [1, 2, 10, 20]</span><br><span class="line"></span><br><span class="line">var arr = [&apos;Google&apos;, &apos;apple&apos;, &apos;Microsoft&apos;];</span><br><span class="line">arr.sort(function (s1, s2) &#123;</span><br><span class="line">    x1 = s1.toUpperCase();</span><br><span class="line">    x2 = s2.toUpperCase();</span><br><span class="line">    if (x1 &lt; x2) &#123;</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    if (x1 &gt; x2) &#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;); // [&apos;apple&apos;, &apos;Google&apos;, &apos;Microsoft&apos;]</span><br></pre></td></tr></table></figure>
+<p><img src="/2018/07/14/JavaScript/" alt="meta标签"><br><img src="/2018/07/14/JavaScript/" alt="meta标签"><br><img src="/2018/07/14/JavaScript/" alt="meta标签"><br><img src="/2018/07/14/JavaScript/" alt="meta标签"><br><img src="/2018/07/14/JavaScript/" alt="meta标签"><br><img src="/2018/07/14/JavaScript/" alt="meta标签"><br><img src="/2018/07/14/JavaScript/" alt="meta标签"><br><img src="/2018/07/14/JavaScript/" alt="meta标签"><br><img src="/2018/07/14/JavaScript/" alt="meta标签"><br><img src="/2018/07/14/JavaScript/" alt="meta标签"><br><img src="/2018/07/14/JavaScript/" alt="meta标签"><br><img src="/2018/07/14/JavaScript/" alt="meta标签"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/14/CSS/" rel="next" title="CSS">
+                <i class="fa fa-chevron-left"></i> CSS
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/25/前端面试整理/" rel="prev" title="前端面试整理">
+                前端面试整理 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">yoyoyun</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、如何写好JavaScript"><span class="nav-text">一、如何写好JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题1：DOM操作"><span class="nav-text">问题1：DOM操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题2：API的设计"><span class="nav-text">问题2：API的设计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaScript效率"><span class="nav-text">JavaScript效率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、JavaScript概览"><span class="nav-text">二、JavaScript概览</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript简史"><span class="nav-text">JavaScript简史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ECMAScript-Past"><span class="nav-text">ECMAScript Past</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript的特点"><span class="nav-text">JavaScript的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaScript主要能做什么"><span class="nav-text">JavaScript主要能做什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#谁在使用JavaScript"><span class="nav-text">谁在使用JavaScript</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要内容"><span class="nav-text">主要内容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#兼容性"><span class="nav-text">兼容性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、代码风格"><span class="nav-text">三、代码风格</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些特殊的JS“风格”"><span class="nav-text">一些特殊的JS“风格”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码风格检查工具"><span class="nav-text">代码风格检查工具</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、变量、值与类型"><span class="nav-text">四、变量、值与类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关于类型"><span class="nav-text">关于类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#语言类型"><span class="nav-text">语言类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量声明"><span class="nav-text">变量声明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不声明直接使用"><span class="nav-text">不声明直接使用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#抽象相等"><span class="nav-text">抽象相等</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Bool类型"><span class="nav-text">Bool类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Number"><span class="nav-text">Number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#String"><span class="nav-text">String</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object"><span class="nav-text">Object</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#对象的属性和方法"><span class="nav-text">对象的属性和方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象创建"><span class="nav-text">对象创建</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#属性访问"><span class="nav-text">属性访问</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#属性遍历"><span class="nav-text">属性遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#值和引用"><span class="nav-text">值和引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对象的类型与构造器"><span class="nav-text">对象的类型与构造器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#原型链"><span class="nav-text">原型链</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#内置类型"><span class="nav-text">内置类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#高级属性"><span class="nav-text">高级属性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Symbol"><span class="nav-text">Symbol</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、函数"><span class="nav-text">五、函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数声明和函数表达式"><span class="nav-text">函数声明和函数表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#匿名函数"><span class="nav-text">匿名函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#this"><span class="nav-text">this</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#call、apply、bind"><span class="nav-text">call、apply、bind</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ES6新增"><span class="nav-text">ES6新增</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#多行字符串，用反引号表示"><span class="nav-text">多行字符串，用反引号表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模板字符串，自动替换字符串中的变量"><span class="nav-text">模板字符串，自动替换字符串中的变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map和set数据结构"><span class="nav-text">map和set数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#iterator遍历器"><span class="nav-text">iterator遍历器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#与其他遍历语法的比较"><span class="nav-text">与其他遍历语法的比较</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rest参数"><span class="nav-text">rest参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量let与const"><span class="nav-text">变量let与const</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#let"><span class="nav-text">let</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#const"><span class="nav-text">const</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析赋值"><span class="nav-text">解析赋值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组"><span class="nav-text">数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型转换"><span class="nav-text">类型转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域"><span class="nav-text">作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#变量屏蔽"><span class="nav-text">变量屏蔽</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量提升"><span class="nav-text">变量提升</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#全局作用域"><span class="nav-text">全局作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#名字空间"><span class="nav-text">名字空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#局部作用域"><span class="nav-text">局部作用域</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法"><span class="nav-text">方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#this-1"><span class="nav-text">this</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高阶函数"><span class="nav-text">高阶函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#map和reduce"><span class="nav-text">map和reduce</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filter"><span class="nav-text">filter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort"><span class="nav-text">sort</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yoyoyun</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>
